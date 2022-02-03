@@ -145,5 +145,8 @@ inoremap {;<CR> {<CR>};<ESC>O
 " VSCode-like colorscheme
 colorscheme codedark
 
+" Highlight 80 char boundary
+set colorcolumn=80
+
 " Start in insert mode
 " au BufRead,BufNewFile * startinsert
