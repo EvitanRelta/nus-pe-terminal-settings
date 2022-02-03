@@ -1,10 +1,10 @@
 [user]
-	name = Shaun Tan
-	email = shauntanzongzhi@gmail.com
+  name = Shaun Tan
+  email = shauntanzongzhi@gmail.com
 [github]
-	user = EvitanRelta
+  user = EvitanRelta
 [alias]
-	login = "!f() { ssh -T git@github.com; }; f"
+  login = "!f() { ssh -T git@github.com; }; f"
   getlab = "!f() { ~cs2030s/get-lab$1; }; f"
   submitlab = "!f() { ~cs2030s/submit-lab$1; }; f"
   cum = "!cd "${GIT_PREFIX:-.}"; f() { git add .; git commit \"$@\"; }; f"
