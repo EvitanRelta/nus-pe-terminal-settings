@@ -94,15 +94,29 @@ noremap! <C-h> <C-w>
 " [Ctrl + D] deletes next word
 imap <C-D> X<Esc>lbce
 
+" [Ctrl + S] save & quit (return to explorer)
+" noremap <silent> <C-S> :w!<CR>:Rex<CR>
+" vnoremap <silent> <C-S> <C-C>:w!<CR>:Rex<CR>
+" inoremap <silent> <C-S> <Esc>:w!<CR>:Rex<CR>
+
+" [Ctrl + Q] quit without saving (return to explorer)
+" noremap <silent> <C-Q> :u0<CR>:Rex<CR>
+" vnoremap <silent> <C-Q> <C-C>:u0<CR>:Rex<CR>
+" inoremap <silent> <C-Q> <Esc>:u0<CR>:Rex<CR>
+
 " [Ctrl + S] save & quit
-noremap <silent> <C-S> :w!<CR>:Rex<CR>
-vnoremap <silent> <C-S> <C-C>:w!<CR>:Rex<CR>
-inoremap <silent> <C-S> <Esc>:w!<CR>:Rex<CR>
+noremap <silent> <C-S> :wq!<CR>
+vnoremap <silent> <C-S> <C-C>:wq!<CR>
+inoremap <silent> <C-S> <Esc>:wq!<CR>
 
 " [Ctrl + Q] quit without saving
-noremap <silent> <C-Q> :u0<CR>:Rex<CR>
-vnoremap <silent> <C-Q> <C-C>:u0<CR>:Rex<CR>
-inoremap <silent> <C-Q> <Esc>:u0<CR>:Rex<CR>
+noremap <silent> <C-Q> :q!<CR>
+vnoremap <silent> <C-Q> <C-C>:q!<CR>
+inoremap <silent> <C-Q> <Esc>:q!<CR>
+
+" [Ctrl + T] new explorer tab
+noremap <silent> <C-T> :Tex<CR>
+inoremap <silent> <C-T> <Esc>:Tex<CR>
 
 " [Ctrl + Z] undo
 noremap <silent> <C-Z> u
