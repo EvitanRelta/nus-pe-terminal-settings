@@ -66,6 +66,7 @@ set t_kb=
 " set laststatus=2
 " let g:lightline = { 'colorscheme': 'wombat' }
 
+" Indentation
 function! InsertTabWrapper()
   let col = col('.') - 1
   if pumvisible()
@@ -77,7 +78,6 @@ function! InsertTabWrapper()
   endif
 endfunction
 inoremap <expr> <tab> InsertTabWrapper()
-inoremap <s-tab> <c-n>
 
 " Decrease indentation
 nnoremap <S-Tab> <<
@@ -87,6 +87,7 @@ inoremap <S-Tab> <C-d>
 let g:netrw_list_hide= '.*\.class$'
 
 " [Ctrl + Backspace] deletes previous word
+" Requires 'stty -ixon' in ./bash_profile 
 set backspace=indent,eol,start
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
@@ -141,6 +142,7 @@ inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
+" VSCode-like colorscheme
 colorscheme codedark
 
 " Start in insert mode
