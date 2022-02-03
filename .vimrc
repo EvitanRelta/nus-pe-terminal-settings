@@ -37,7 +37,7 @@ set mouse=a
 set wildmenu 
 set wildmode=longest:list,full
 " set showcmd 
-" set hlsearch 
+set hlsearch 
 " set confirm 
 " set visualbell 
 set ignorecase 
