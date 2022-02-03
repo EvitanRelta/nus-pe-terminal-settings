@@ -79,6 +79,10 @@ endfunction
 inoremap <expr> <tab> InsertTabWrapper()
 inoremap <s-tab> <c-n>
 
+" Decrease indentation
+nnoremap <S-Tab> <<
+inoremap <S-Tab> <C-d>
+
 " Hide compiled java files
 let g:netrw_list_hide= '.*\.class$'
 
