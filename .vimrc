@@ -104,16 +104,15 @@ inoremap <silent> <C-Q> <Esc>:u0<CR>:Rex<CR>
 noremap <silent> <C-Z> u
 inoremap <silent> <C-Z> <Esc>ui
 
-
-" [Ctrl + C] yank to system clipboard
-vmap <C-C> "+y
-inoremap <silent> <C-p> <Esc>"+pi
+" [Ctrl + Y] redo
+noremap <silent> <C-Y> <C-R>
+inoremap <silent> <C-Y> <Esc><C-R>i
 
 " [Ctrl + K] (normal mode) compile all .java file in current dir
 noremap <silent> <C-K> :!javac *.java<CR>
 
 " LMB goes into insert mode
-nnoremap <LeftMouse> <LeftMouse>i
+nnoremap <LeftMouse> <LeftMouse>a
 
 " Auto close brackets
 inoremap " ""<left>
