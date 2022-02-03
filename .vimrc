@@ -123,5 +123,7 @@ inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
+colorscheme codedark
+
 " Start in insert mode
 " au BufRead,BufNewFile * startinsert
