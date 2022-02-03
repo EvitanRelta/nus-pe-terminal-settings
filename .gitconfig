@@ -6,6 +6,7 @@
 [alias]
 	login = "!f() { ssh -T git@github.com; }; f"
   getlab = "!f() { ~cs2030s/get-lab$1; }; f"
+  submitlab = "!f() { ~cs2030s/submit-lab$1; }; f"
   cum = "!cd "${GIT_PREFIX:-.}"; f() { git add .; git commit \"$@\"; }; f"
   cumane = "!cd "${GIT_PREFIX:-.}"; f() { git add .; git commit --amend --no-edit; }; f"
   cane = "!cd "${GIT_PREFIX:-.}"; f() { git commit --amend --no-edit; }; f"
