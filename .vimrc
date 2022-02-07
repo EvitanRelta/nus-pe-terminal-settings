@@ -95,25 +95,39 @@ noremap! <C-h> <C-w>
 " [Ctrl + D] deletes next word
 inoremap <C-D> X<Esc>ce
 
-" [Ctrl + S] save & quit (return to explorer)
-" noremap <silent> <C-S> :w!<CR>:Rex<CR>
-" vnoremap <silent> <C-S> <C-C>:w!<CR>:Rex<CR>
-" inoremap <silent> <C-S> <Esc>:w!<CR>:Rex<CR>
-
-" [Ctrl + Q] quit without saving (return to explorer)
-" noremap <silent> <C-Q> :u0<CR>:Rex<CR>
-" vnoremap <silent> <C-Q> <C-C>:u0<CR>:Rex<CR>
-" inoremap <silent> <C-Q> <Esc>:u0<CR>:Rex<CR>
-
+function! SaveAndQuit()
+  if &ft ==# "netrw"
+    :q!
+  else
+    try
+      :w!
+      :Rex
+    catch
+      :wq!
+    endtry
+  endif
+endfunction
 " [Ctrl + S] save & quit
-noremap <silent> <C-S> :wq!<CR>
-vnoremap <silent> <C-S> <C-C>:wq!<CR>
-inoremap <silent> <C-S> <Esc>:wq!<CR>
+noremap <silent> <C-S> :call SaveAndQuit()<CR>
+vnoremap <silent> <C-S> <C-C>:call SaveAndQuit()<CR>
+inoremap <silent> <C-S> <Esc>:call SaveAndQuit()<CR>
 
+
+function! QuitWOSaving()
+  if &ft ==# "netrw"
+    :q!
+  else
+    try
+      :Rex
+    catch
+      :q!
+    endtry
+  endif
+endfunction
 " [Ctrl + Q] quit without saving
-noremap <silent> <C-Q> :q!<CR>
-vnoremap <silent> <C-Q> <C-C>:q!<CR>
-inoremap <silent> <C-Q> <Esc>:q!<CR>
+noremap <silent> <C-Q> :call QuitWOSaving()<CR>
+vnoremap <silent> <C-Q> <C-C>:call QuitWOSaving()<CR>
+inoremap <silent> <C-Q> <Esc>:call QuitWOSaving()<CR>
 
 " [Ctrl + T] new explorer tab
 noremap <silent> <C-T> :Tex<CR>
