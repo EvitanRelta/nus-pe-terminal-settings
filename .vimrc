@@ -142,6 +142,25 @@ au FileType java inoremap { {}<left>
 au FileType java inoremap {<CR> {<CR>}<ESC>O
 au FileType java inoremap {;<CR> {<CR>};<ESC>O
 
+" Comment-out selection
+function! JavaInsertModeComment()
+  let startingCol = col('.') - 1
+  return "\<ESC>I//\<ESC>" . (startingCol + 3) . "|i"
+endfunction
+au FileType java vmap <C-_> :norm i//<CR>
+au FileType java inoremap <expr> <C-_> JavaInsertModeComment()
+
+" Uncomment selection
+function! JavaInsertModeUncomment()
+  let startingCol = col('.') - 1
+  if getline('.') =~ "^\\s*//"
+    return "\<ESC>I\<DEL>\<DEL>\<ESC>" . (startingCol - 1) . "|i"
+  endif
+  return ""
+endfunction
+au FileType java vmap <C-U> :norm ^xx<CR>
+au FileType java inoremap <expr> <C-U> JavaInsertModeUncomment()
+
 " VSCode-like colorscheme
 colorscheme codedark
 
