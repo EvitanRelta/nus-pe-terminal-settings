@@ -177,24 +177,39 @@ au FileType java inoremap {} {}
 au FileType java inoremap {<CR> {<CR>}<ESC>O
 au FileType java inoremap {;<CR> {<CR>};<ESC>O
 
-" Comment-out selection
-function! JavaInsertModeComment()
-  let startingCol = col('.') - 1
-  return "\<ESC>I//\<ESC>" . (startingCol + 3) . "|i"
-endfunction
-au FileType java vnoremap <C-_> :norm i//<CR>
-au FileType java inoremap <expr> <C-_> JavaInsertModeComment()
+" [Ctrl + /] (visual) comment / uncomment selection
+function! JavaVisualCommentAndUncomment()
+  let isAllCommented = 1
+  let [startLine, endLine] = sort([line('v'), line('.')])
 
-" Uncomment selection
-function! JavaInsertModeUncomment()
-  let startingCol = col('.') - 1
-  if getline('.') =~ "^\\s*//"
-    return "\<ESC>I\<DEL>\<DEL>\<ESC>" . (startingCol - 1) . "|i"
+  " Check if every line is commented
+  while startLine <= endLine
+    if getline(startLine) !~ "^\\s*//"
+      let isAllCommented = 0
+    endif
+    let startLine += 1
+  endwhile
+
+  if isAllCommented
+    return ":norm ^xx\<CR>"
+  else
+    return ":norm i//\<CR>"
   endif
-  return ""
 endfunction
-au FileType java vnoremap <C-U> :norm ^xx<CR>
-au FileType java inoremap <expr> <C-U> JavaInsertModeUncomment()
+au FileType java vnoremap <expr> <C-_> JavaVisualCommentAndUncomment()
+
+
+" [Ctrl + /] (insert) comment / uncomment line
+function! JavaInsertCommentAndUncomment()
+  let startingCol = col('.') - 1
+  let isCommented = getline('.') =~ "^\\s*//"
+  if isCommented
+    return "\<ESC>I\<DEL>\<DEL>\<ESC>" . (startingCol - 1) . "|i"
+  else
+    return "\<ESC>I//\<ESC>" . (startingCol + 3) . "|i"
+  endif
+endfunction
+au FileType java inoremap <expr> <C-_> JavaInsertCommentAndUncomment()
 
 " VSCode-like colorscheme
 colorscheme codedark
