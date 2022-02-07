@@ -133,14 +133,14 @@ noremap <silent> <C-K> :!javac *.java<CR>
 " LMB goes into insert mode
 nnoremap <LeftMouse> <LeftMouse>a
 
-" Auto close brackets
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+" Auto close brackets for .java files
+au FileType java inoremap " ""<left>
+au FileType java inoremap ' ''<left>
+au FileType java inoremap ( ()<left>
+au FileType java inoremap [ []<left>
+au FileType java inoremap { {}<left>
+au FileType java inoremap {<CR> {<CR>}<ESC>O
+au FileType java inoremap {;<CR> {<CR>};<ESC>O
 
 " VSCode-like colorscheme
 colorscheme codedark
