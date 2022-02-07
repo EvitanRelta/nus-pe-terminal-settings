@@ -130,6 +130,26 @@ inoremap <silent> <C-Y> <Esc><C-R>i
 " [Ctrl + K] (normal mode) compile all .java file in current dir
 noremap <silent> <C-K> :!javac *.java<CR>
 
+" [Ctrl + F]
+" (normal/insert mode) clear highlights
+noremap <C-F> :noh<CR>
+inoremap <C-F> <ESC>:noh<CR>i
+" (visual mode) find selected text
+vnoremap <C-F> y/<C-R>"<CR>
+
+
+function! Replace()
+  let isMultiLineSelection = line('v') != line('.')
+  if isMultiLineSelection
+    " Replace previously yanked text in selection
+    return ":s/\<C-R>\"//g\<LEFT>\<LEFT>"
+  endif
+    " Highlight selected text, and replace all selected text
+    return "y/\<C-R>\"\<CR>:%s/\<C-R>\"//g\<LEFT>\<LEFT>"
+endfunction
+" [CTRL + R] (visual)
+vnoremap <expr> <C-R> Replace()
+
 " LMB goes into insert mode
 nnoremap <LeftMouse> <LeftMouse>a
 
