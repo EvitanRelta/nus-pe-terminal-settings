@@ -93,7 +93,7 @@ noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
 
 " [Ctrl + D] deletes next word
-imap <C-D> X<Esc>lbce
+inoremap <C-D> X<Esc>lbce
 
 " [Ctrl + S] save & quit (return to explorer)
 " noremap <silent> <C-S> :w!<CR>:Rex<CR>
@@ -172,7 +172,7 @@ function! JavaInsertModeComment()
   let startingCol = col('.') - 1
   return "\<ESC>I//\<ESC>" . (startingCol + 3) . "|i"
 endfunction
-au FileType java vmap <C-_> :norm i//<CR>
+au FileType java vnoremap <C-_> :norm i//<CR>
 au FileType java inoremap <expr> <C-_> JavaInsertModeComment()
 
 " Uncomment selection
@@ -183,7 +183,7 @@ function! JavaInsertModeUncomment()
   endif
   return ""
 endfunction
-au FileType java vmap <C-U> :norm ^xx<CR>
+au FileType java vnoremap <C-U> :norm ^xx<CR>
 au FileType java inoremap <expr> <C-U> JavaInsertModeUncomment()
 
 " VSCode-like colorscheme
@@ -193,12 +193,12 @@ colorscheme codedark
 set colorcolumn=80
 
 " Selection indent
-vmap <Tab> >gv
-vmap <S-Tab> <gv
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 
 " Delete selection
-vmap <BS> d
-vmap <Del> d
+vnoremap <BS> d
+vnoremap <Del> d
 
 " Disable error bell sounds
 set noerrorbells visualbell t_vb=
