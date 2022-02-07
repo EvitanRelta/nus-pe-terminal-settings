@@ -93,7 +93,7 @@ noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
 
 " [Ctrl + D] deletes next word
-inoremap <C-D> X<Esc>lbce
+inoremap <C-D> X<Esc>ce
 
 " [Ctrl + S] save & quit (return to explorer)
 " noremap <silent> <C-S> :w!<CR>:Rex<CR>
