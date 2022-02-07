@@ -143,7 +143,7 @@ noremap <silent> <C-K> :!javac *.java<CR>
 " [Ctrl + F]
 " (normal/insert mode) clear highlights
 noremap <C-F> :noh<CR>
-inoremap <C-F> <ESC>:noh<CR>i
+inoremap <C-F> <ESC>:noh<CR>a
 " (visual mode) find selected text
 vnoremap <C-F> y/<C-R>"<CR>
 
