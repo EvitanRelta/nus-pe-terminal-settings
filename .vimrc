@@ -218,6 +218,8 @@ function! LoadTemplate()
 
   " Replace all [FILE_NAME] with the new-file filename
   %s/\[FILE_NAME\]/\=expand("%:t:r")/g
+  call cursor(3,5)
+  call feedkeys('a')
 endfunction
 
 " Use template when creating new .java files
