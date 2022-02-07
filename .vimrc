@@ -148,5 +148,9 @@ colorscheme codedark
 " Highlight 80 char boundary
 set colorcolumn=80
 
+" Selection indent
+vmap <Tab> >gv
+vmap <S-Tab> <gv
+
 " Start in insert mode
 " au BufRead,BufNewFile * startinsert
