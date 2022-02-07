@@ -160,5 +160,8 @@ vmap <Del> d
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
+" Prevent selecting newline in visual mode
+set selection=exclusive
+
 " Start in insert mode
 " au BufRead,BufNewFile * startinsert
