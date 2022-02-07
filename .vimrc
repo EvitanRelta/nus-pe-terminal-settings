@@ -155,10 +155,15 @@ nnoremap <LeftMouse> <LeftMouse>a
 
 " Auto close brackets for .java files
 au FileType java inoremap " ""<left>
+au FileType java inoremap "" ""
 au FileType java inoremap ' ''<left>
+au FileType java inoremap '' ''
 au FileType java inoremap ( ()<left>
+au FileType java inoremap () ()
 au FileType java inoremap [ []<left>
+au FileType java inoremap [] []
 au FileType java inoremap { {}<left>
+au FileType java inoremap {} {}
 au FileType java inoremap {<CR> {<CR>}<ESC>O
 au FileType java inoremap {;<CR> {<CR>};<ESC>O
 
