@@ -1,0 +1,14 @@
+# Ignore everything
+*
+
+# Whitelist files
+!/.gitignore
+!/.vim/
+!/.vim/*
+/.vim/.netrwhist
+
+!/.bash_profile
+!/.gitconfig
+!/.inputrc
+!/.vimrc
+
