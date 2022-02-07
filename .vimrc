@@ -152,5 +152,9 @@ set colorcolumn=80
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
+" Disable error bell sounds
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
 " Start in insert mode
 " au BufRead,BufNewFile * startinsert
