@@ -214,7 +214,7 @@ argadd ./*.java
 
 function! LoadTemplate()
   " Use .vim/templates/template.ext file, whr .ext is the new-file extension
-  silent! 0r .vim/templates/template.%:e
+  silent! 0r ~/.vim/templates/template.%:e
 
   " Replace all [FILE_NAME] with the new-file filename
   %s/\[FILE_NAME\]/\=expand("%:t:r")/g
