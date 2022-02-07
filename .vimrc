@@ -152,6 +152,10 @@ set colorcolumn=80
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
+" Delete selection
+vmap <BS> d
+vmap <Del> d
+
 " Disable error bell sounds
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
