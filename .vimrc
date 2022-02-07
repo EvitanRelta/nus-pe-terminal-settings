@@ -129,10 +129,6 @@ noremap <silent> <C-Q> :call QuitWOSaving()<CR>
 vnoremap <silent> <C-Q> <C-C>:call QuitWOSaving()<CR>
 inoremap <silent> <C-Q> <Esc>:call QuitWOSaving()<CR>
 
-" [Ctrl + T] new explorer tab
-noremap <silent> <C-T> :Tex<CR>
-inoremap <silent> <C-T> <Esc>:Tex<CR>
-
 " [Ctrl + Z] undo
 noremap <silent> <C-Z> u
 inoremap <silent> <C-Z> <Esc>ui
