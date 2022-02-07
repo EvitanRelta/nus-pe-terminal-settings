@@ -7,6 +7,7 @@ alias cd..4='cd ../../../..'
 alias cd..5='cd ../../../../..'
 
 alias vim.='vim .'
+alias vim,='vim .'
 
 alias reloadbash='source ~/.bash_profile; bind -f ~/.inputrc'
 
