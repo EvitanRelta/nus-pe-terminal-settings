@@ -163,5 +163,9 @@ autocmd GUIEnter * set visualbell t_vb=
 " Prevent selecting newline in visual mode
 set selection=exclusive
 
+" Auto-complete keywords from every .java file in current dir
+" You'll have start vim in working directory first.
+argadd ./*.java
+
 " Start in insert mode
 " au BufRead,BufNewFile * startinsert
