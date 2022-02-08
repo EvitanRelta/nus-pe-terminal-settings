@@ -108,7 +108,7 @@ function! SaveAndQuit()
   endif
 endfunction
 " [Ctrl + S] save & quit
-noremap <silent> <C-S> :call SaveAndQuit()<CR>
+nnoremap <silent> <C-S> :call SaveAndQuit()<CR>
 vnoremap <silent> <C-S> <C-C>:call SaveAndQuit()<CR>
 inoremap <silent> <C-S> <Esc>:call SaveAndQuit()<CR>
 
@@ -125,24 +125,24 @@ function! QuitWOSaving()
   endif
 endfunction
 " [Ctrl + Q] quit without saving
-noremap <silent> <C-Q> :call QuitWOSaving()<CR>
+nnoremap <silent> <C-Q> :call QuitWOSaving()<CR>
 vnoremap <silent> <C-Q> <C-C>:call QuitWOSaving()<CR>
 inoremap <silent> <C-Q> <Esc>:call QuitWOSaving()<CR>
 
 " [Ctrl + Z] undo
-noremap <silent> <C-Z> u
+nnoremap <silent> <C-Z> u
 inoremap <silent> <C-Z> <Esc>ui
 
 " [Ctrl + Y] redo
-noremap <silent> <C-Y> <C-R>
+nnoremap <silent> <C-Y> <C-R>
 inoremap <silent> <C-Y> <Esc><C-R>i
 
 " [Ctrl + K] (normal mode) compile all .java file in current dir
-noremap <silent> <C-K> :!javac *.java<CR>
+nnoremap <silent> <C-K> :!javac *.java<CR>
 
 " [Ctrl + F]
 " (normal/insert mode) clear highlights
-noremap <C-F> :noh<CR>
+nnoremap <C-F> :noh<CR>
 inoremap <C-F> <ESC>:noh<CR>a
 " (visual mode) find selected text
 vnoremap <C-F> y/<C-R>"<CR>
