@@ -11,6 +11,8 @@ alias vim,='vim .'
 alias vim,.='vim .'
 alias vim.,='vim .'
 
+alias ls='ls -1'
+
 alias reloadbash='source ~/.bash_profile; bind -f ~/.inputrc'
 
 alias javaca='javac *.java'
