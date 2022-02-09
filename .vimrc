@@ -128,10 +128,10 @@ nnoremap <silent> <C-S> :wq!<CR>
 vnoremap <silent> <C-S> <C-C>:wq!<CR>
 inoremap <silent> <C-S> <Esc>:wq!<CR>
 
-" [Ctrl + Q] quit without saving
-nnoremap <silent> <C-Q> :q!<CR>
-vnoremap <silent> <C-Q> <C-C>:q!<CR>
-inoremap <silent> <C-Q> <Esc>:q!<CR>
+" [Ctrl + W] quit without saving
+nnoremap <silent> <C-W> :q!<CR>
+vnoremap <silent> <C-W> <C-C>:q!<CR>
+inoremap <silent> <C-W> <Esc>:q!<CR>
 
 " [Ctrl + T] goto 1st tab
 noremap <silent> <C-T> 1gt
