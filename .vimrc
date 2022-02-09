@@ -126,10 +126,10 @@ nnoremap <silent> <C-Q> :q!<CR>
 vnoremap <silent> <C-Q> <C-C>:q!<CR>
 inoremap <silent> <C-Q> <Esc>:q!<CR>
 
-" [Ctrl + T] new explorer tab
-noremap <silent> <C-T> :Tex<CR>
-vnoremap <silent> <C-T> <C-C>:Tex<CR>
-inoremap <silent> <C-T> <Esc>:Tex<CR>
+" [Ctrl + T] goto 1st tab
+noremap <silent> <C-T> 1gt
+vnoremap <silent> <C-T> <C-C>1gt
+inoremap <silent> <C-T> <Esc>1gt
 
 " [Ctrl + Z] undo
 nnoremap <silent> <C-Z> u
