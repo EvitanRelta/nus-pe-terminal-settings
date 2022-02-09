@@ -28,6 +28,9 @@ set tabstop=2
 " uncomment the following
 set mouse=a
 
+" Fix mouse not working on split screens
+set ttymouse=sgr
+
 " uncomment the following to show ruler (line,colum position)
 " set ruler 
 
