@@ -31,6 +31,9 @@ set mouse=a
 " Fix mouse not working on split screens
 set ttymouse=sgr
 
+" LMB goes into insert mode
+nnoremap <LeftMouse> <LeftMouse>a
+
 " uncomment the following to show ruler (line,colum position)
 " set ruler 
 
@@ -162,9 +165,6 @@ function! Replace()
 endfunction
 " [CTRL + R] (visual)
 vnoremap <expr> <C-R> Replace()
-
-" LMB goes into insert mode
-nnoremap <LeftMouse> <LeftMouse>a
 
 " Auto close brackets for .java files
 function! AutoCloseBracket(openingChar, closingChar)
