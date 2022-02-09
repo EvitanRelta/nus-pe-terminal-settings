@@ -63,6 +63,10 @@ set t_kb=
 " Highlight cursor line
 set cul
 
+" Speed boost
+set lazyredraw
+set ttyfast
+
 " For students who are used to using the psvm/sout/sop abbreviation, you can
 " uncomment the following.
 "
