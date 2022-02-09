@@ -60,6 +60,9 @@ set smartcase
 " The following change the backspace on old Windows machine
 set t_kb=
 
+" Highlight cursor line
+set cul
+
 " For students who are used to using the psvm/sout/sop abbreviation, you can
 " uncomment the following.
 "
