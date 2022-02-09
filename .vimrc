@@ -34,6 +34,9 @@ set ttymouse=sgr
 " LMB goes into insert mode
 nnoremap <LeftMouse> <LeftMouse>a
 
+" Ensures normal mode when changing tabs/windows/buffers
+au BufLeave * call feedkeys("\<ESC>", 't')
+
 " uncomment the following to show ruler (line,colum position)
 " set ruler 
 
