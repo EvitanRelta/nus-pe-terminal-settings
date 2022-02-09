@@ -230,3 +230,9 @@ au BufNewFile *.java call LoadTemplate()
 
 " Start in insert mode
 " au BufRead,BufNewFile * startinsert
+
+" DelimitMate expand: function fn() {<CR>} gives
+" function fn() {
+"   //cursor here
+" }
+let g:delimitMate_expand_cr = 1
