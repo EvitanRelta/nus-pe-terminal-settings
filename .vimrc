@@ -105,6 +105,12 @@ function! SaveAndQuit()
   if &ft ==# "netrw"
     :q!
   else
+    let numOfWindows = len(range(1, winnr('$')))
+    let numOfTabs = len(range(1, tabpagenr('$')))
+    if numOfWindows != 1 || numOfTabs != 1
+      :wq!
+      return
+    endif
     try
       :w!
       :Rex
@@ -123,6 +129,12 @@ function! QuitWOSaving()
   if &ft ==# "netrw"
     :q!
   else
+    let numOfWindows = len(range(1, winnr('$')))
+    let numOfTabs = len(range(1, tabpagenr('$')))
+    if numOfWindows != 1 || numOfTabs != 1
+      :q!
+      return
+    endif
     try
       :Rex
     catch
