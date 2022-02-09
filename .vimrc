@@ -64,7 +64,7 @@ set t_kb=
 set cul
 
 " Speed boost
-set lazyredraw
+" set lazyredraw
 set ttyfast
 
 " For students who are used to using the psvm/sout/sop abbreviation, you can
