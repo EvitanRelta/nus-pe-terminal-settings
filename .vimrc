@@ -89,6 +89,10 @@ inoremap <expr> <tab> InsertTabWrapper()
 nnoremap <S-Tab> <<
 inoremap <S-Tab> <C-d>
 
+" Selection indent
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+
 " Hide compiled java files
 let g:netrw_list_hide= '.*\.class$'
 
@@ -199,10 +203,6 @@ colorscheme codedark
 
 " Highlight 80 char boundary
 set colorcolumn=80
-
-" Selection indent
-vnoremap <Tab> >gv
-vnoremap <S-Tab> <gv
 
 " Delete selection
 vnoremap <BS> d
