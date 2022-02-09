@@ -166,14 +166,19 @@ function! AutoCloseBracket(openingChar, closingChar)
 endfunction
 au FileType java inoremap <expr> " AutoCloseBracket('"', '"')
 au FileType java inoremap "" ""
+au FileType java inoremap "<BS> <NOP>
 au FileType java inoremap <expr> ' AutoCloseBracket("'", "'")
 au FileType java inoremap '' ''
+au FileType java inoremap '<BS> <NOP>
 au FileType java inoremap ( ()<LEFT>
 au FileType java inoremap () ()
+au FileType java inoremap (<BS> <NOP>
 au FileType java inoremap [ []<LEFT>
 au FileType java inoremap [] []
+au FileType java inoremap [<BS> <NOP>
 au FileType java inoremap { {}<LEFT>
 au FileType java inoremap {} {}
+au FileType java inoremap {<BS> <NOP>
 au FileType java inoremap {<CR> {<CR>}<ESC>O
 au FileType java inoremap {;<CR> {<CR>};<ESC>O
 
