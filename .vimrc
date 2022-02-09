@@ -132,6 +132,11 @@ inoremap <silent> <C-Z> <Esc>ui
 nnoremap <silent> <C-Y> <C-R>
 inoremap <silent> <C-Y> <Esc><C-R>i
 
+" [Ctrl + A] visually select all
+nnoremap <silent> <C-A> ggVG
+vnoremap <silent> <C-A> <C-C>ggVG
+inoremap <silent> <C-A> <Esc>ggVG
+
 " [Ctrl + K] (normal mode) compile all .java file in current dir
 nnoremap <silent> <C-K> :!javac *.java<CR>
 
