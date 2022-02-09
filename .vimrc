@@ -70,7 +70,7 @@ set t_kb=
 
 " For lightline
 set laststatus=2
-let g:lightline = { 'colorscheme': 'wombat' }
+let g:lightline = { 'colorscheme': 'deus' }
 
 " Indentation
 function! InsertTabWrapper()
