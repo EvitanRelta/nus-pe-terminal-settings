@@ -98,6 +98,9 @@ let g:netrw_altv=1
 " Netrw <CR> / LMB opens file in new tab
 let g:netrw_browse_split=3
 
+" Set new split view to be 80%, with netrw being 20%
+let g:netrw_winsize=85
+
 " [Ctrl + Backspace] deletes previous word
 " Requires 'stty -ixon' in ./bash_profile 
 set backspace=indent,eol,start
