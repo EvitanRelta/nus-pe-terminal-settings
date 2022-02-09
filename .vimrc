@@ -95,6 +95,9 @@ let g:netrw_list_hide= '.*\.class$'
 " Open new split view ([V] in Netrw) on right instead of left
 let g:netrw_altv=1
 
+" Netrw <CR> / LMB opens file in new tab
+let g:netrw_browse_split=3
+
 " [Ctrl + Backspace] deletes previous word
 " Requires 'stty -ixon' in ./bash_profile 
 set backspace=indent,eol,start
@@ -104,51 +107,15 @@ noremap! <C-h> <C-w>
 " [Ctrl + D] deletes next word
 inoremap <C-D> X<Esc>ce
 
-function! SaveAndQuit()
-  if &ft ==# "netrw"
-    :q!
-  else
-    let numOfWindows = len(range(1, winnr('$')))
-    let numOfTabs = len(range(1, tabpagenr('$')))
-    if numOfWindows != 1 || numOfTabs != 1
-      :wq!
-      return
-    endif
-    try
-      :w!
-      :Rex
-    catch
-      :wq!
-    endtry
-  endif
-endfunction
 " [Ctrl + S] save & quit
-nnoremap <silent> <C-S> :call SaveAndQuit()<CR>
-vnoremap <silent> <C-S> <C-C>:call SaveAndQuit()<CR>
-inoremap <silent> <C-S> <Esc>:call SaveAndQuit()<CR>
+nnoremap <silent> <C-S> :wq!<CR>
+vnoremap <silent> <C-S> <C-C>:wq!<CR>
+inoremap <silent> <C-S> <Esc>:wq!<CR>
 
-
-function! QuitWOSaving()
-  if &ft ==# "netrw"
-    :q!
-  else
-    let numOfWindows = len(range(1, winnr('$')))
-    let numOfTabs = len(range(1, tabpagenr('$')))
-    if numOfWindows != 1 || numOfTabs != 1
-      :q!
-      return
-    endif
-    try
-      :Rex
-    catch
-      :q!
-    endtry
-  endif
-endfunction
 " [Ctrl + Q] quit without saving
-nnoremap <silent> <C-Q> :call QuitWOSaving()<CR>
-vnoremap <silent> <C-Q> <C-C>:call QuitWOSaving()<CR>
-inoremap <silent> <C-Q> <Esc>:call QuitWOSaving()<CR>
+nnoremap <silent> <C-Q> :q!<CR>
+vnoremap <silent> <C-Q> <C-C>:q!<CR>
+inoremap <silent> <C-Q> <Esc>:q!<CR>
 
 " [Ctrl + T] new explorer tab
 noremap <silent> <C-T> :Tex<CR>
