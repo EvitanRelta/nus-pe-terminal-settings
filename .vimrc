@@ -69,8 +69,8 @@ set t_kb=
 " let g:rainbow_active = 1
 
 " For lightline
-" set laststatus=2
-" let g:lightline = { 'colorscheme': 'wombat' }
+set laststatus=2
+let g:lightline = { 'colorscheme': 'wombat' }
 
 " Indentation
 function! InsertTabWrapper()
