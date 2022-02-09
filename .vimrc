@@ -83,15 +83,14 @@ function! InsertTabWrapper()
     return "\<c-p>"
   endif
 endfunction
+nnoremap <Tab> >>
 inoremap <expr> <tab> InsertTabWrapper()
+vnoremap <Tab> >gv
 
 " Decrease indentation
 nnoremap <S-Tab> <<
-inoremap <S-Tab> <C-d>
-
-" Selection indent
-vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
+inoremap <S-Tab> <C-d>
 
 " Hide compiled java files
 let g:netrw_list_hide= '.*\.class$'
@@ -126,14 +125,17 @@ inoremap <silent> <C-Q> <Esc>:q!<CR>
 
 " [Ctrl + T] new explorer tab
 noremap <silent> <C-T> :Tex<CR>
+vnoremap <silent> <C-T> <C-C>:Tex<CR>
 inoremap <silent> <C-T> <Esc>:Tex<CR>
 
 " [Ctrl + Z] undo
 nnoremap <silent> <C-Z> u
+vnoremap <silent> <C-Z> <C-C>u
 inoremap <silent> <C-Z> <Esc>ui
 
 " [Ctrl + Y] redo
 nnoremap <silent> <C-Y> <C-R>
+vnoremap <silent> <C-Y> <C-C><C-R>
 inoremap <silent> <C-Y> <Esc><C-R>i
 
 " [Ctrl + A] visually select all
