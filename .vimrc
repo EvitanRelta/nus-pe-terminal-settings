@@ -158,10 +158,10 @@ vnoremap <silent> c y
 " [V] (visual) paste
 vnoremap <silent> v p
 
-" [Ctrl + S] save & quit
-nnoremap <silent> <C-S> :wq!<CR>
-vnoremap <silent> <C-S> <C-C>:wq!<CR>
-inoremap <silent> <C-S> <Esc>:wq!<CR>
+" [Ctrl + S] save
+nnoremap <silent> <C-S> :w!<CR>
+vnoremap <silent> <C-S> <C-C>:w!<CR>
+inoremap <silent> <C-S> <Esc>:w!<CR>i
 
 " [Ctrl + W] quit without saving
 nnoremap <silent> <C-W> :q!<CR>
