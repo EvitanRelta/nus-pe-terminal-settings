@@ -152,6 +152,12 @@ set virtualedit=onemore
 " [Ctrl + D] deletes next word
 inoremap <C-D> X<Esc>ce
 
+" [C] (visual) yank
+vnoremap <silent> c y
+
+" [V] (visual) paste
+vnoremap <silent> v p
+
 " [Ctrl + S] save & quit
 nnoremap <silent> <C-S> :wq!<CR>
 vnoremap <silent> <C-S> <C-C>:wq!<CR>
