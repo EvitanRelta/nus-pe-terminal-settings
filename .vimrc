@@ -130,6 +130,22 @@ inoremap <S-RIGHT> <C-O>v<RIGHT>
 inoremap <S-UP> <C-O>v<UP>
 inoremap <S-DOWN> <C-O>v<DOWN>
 
+" Make visual insert mode more like normal text editor
+vnoremap <HOME> <ESC><HOME>
+vnoremap <END> <ESC><END>
+vnoremap <S-HOME> <HOME>
+vnoremap <S-END> <END>
+
+vnoremap <LEFT> <ESC><LEFT>
+vnoremap <RIGHT> <ESC><RIGHT>
+vnoremap <S-LEFT> <LEFT>
+vnoremap <S-RIGHT> <RIGHT>
+
+vnoremap <UP> <ESC><UP>
+vnoremap <DOWN> <ESC><DOWN>
+vnoremap <S-UP> <UP>
+vnoremap <S-DOWN> <DOWN>
+
 " Fix not selecting last character if cursor at end of line
 set virtualedit=onemore
 
