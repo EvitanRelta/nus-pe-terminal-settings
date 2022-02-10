@@ -130,6 +130,9 @@ inoremap <S-RIGHT> <C-O>v<RIGHT>
 inoremap <S-UP> <C-O>v<UP>
 inoremap <S-DOWN> <C-O>v<DOWN>
 
+" Fix not selecting last character if cursor at end of line
+set virtualedit=onemore
+
 " [Ctrl + D] deletes next word
 inoremap <C-D> X<Esc>ce
 
