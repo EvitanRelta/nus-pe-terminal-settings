@@ -120,6 +120,16 @@ set backspace=indent,eol,start
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
 
+" Shift selection
+inoremap <S-HOME> <C-O>v<HOME>
+inoremap <S-END> <C-O>v<END>
+inoremap <C-S-LEFT> <C-O>v<C-LEFT>
+inoremap <C-S-RIGHT> <C-O>v<C-RIGHT>
+inoremap <S-LEFT> <C-O>v<LEFT>
+inoremap <S-RIGHT> <C-O>v<RIGHT>
+inoremap <S-UP> <C-O>v<UP>
+inoremap <S-DOWN> <C-O>v<DOWN>
+
 " [Ctrl + D] deletes next word
 inoremap <C-D> X<Esc>ce
 
