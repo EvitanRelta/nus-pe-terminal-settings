@@ -5,8 +5,9 @@
   user = EvitanRelta
 [alias]
   login = "!f() { ssh -T git@github.com; }; f"
-  getlab = "!f() { ~cs2030s/get-lab$1; }; f"
-  submitlab = "!f() { ~cs2030s/submit-lab$1; }; f"
+  swapgit = "!cd "${GIT_PREFIX:-.}"; f() { mkdir -p $HOME/old_gits; [ -d $HOME/old_gits/${PWD##*/} ] && mv $HOME/old_gits/${PWD##*/} .git_temp; [ -d .git ] && mv .git $HOME/old_gits/${PWD##*/}; [ -d .git_temp ] && mv .git_temp .git; }; f"
+  getlab = "!cd "${GIT_PREFIX:-.}"; f() { ~cs2030s/get-lab$1; cd \"$HOME/lab$1-$(eval git config github.user)\"; git swapgit; git init; git add .; git commit -m \"Initial lab$1 files\"; }; f"
+  submitlab = "!cd "${GIT_PREFIX:-.}"; f() { cd \"$HOME/lab$1-$(eval git config github.user)\"; git swapgit; ~cs2030s/submit-lab$1; git swapgit; }; f"
   cum = "!cd "${GIT_PREFIX:-.}"; f() { git add .; git commit \"$@\"; }; f"
   cumane = "!cd "${GIT_PREFIX:-.}"; f() { git add .; git commit --amend --no-edit; }; f"
   cane = "!cd "${GIT_PREFIX:-.}"; f() { git commit --amend --no-edit; }; f"
