@@ -35,7 +35,7 @@ set ttymouse=sgr
 nnoremap <LeftMouse> <LeftMouse>a
 
 " Fix MMB copy-then-paste, instead of just pasting
-vnoremap <MiddleMouse> pi
+vnoremap <MiddleMouse> "_dPi
 
 " Ensures normal mode when changing tabs/windows/buffers
 au BufLeave * call feedkeys("\<ESC>", 't')
@@ -153,7 +153,7 @@ inoremap <C-D> X<Esc>ce
 vnoremap <silent> c y
 
 " [V] (visual) paste
-vnoremap <silent> v p
+vnoremap <silent> v "_dP
 
 " [Ctrl + S] save
 nnoremap <silent> <C-S> :w!<CR>
