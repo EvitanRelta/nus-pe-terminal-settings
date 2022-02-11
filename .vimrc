@@ -188,6 +188,11 @@ noremap <silent> <C-T> :Tex<CR>
 vnoremap <silent> <C-T> <C-C>:Tex<CR>
 inoremap <silent> <C-T> <Esc>:Tex<CR>
 
+" [Ctrl + G] new explorer split
+noremap <silent> <C-G> :Vex<CR><C-W>r
+vnoremap <silent> <C-G> <C-C>:Vex<CR><C-W>r
+inoremap <silent> <C-G> <Esc>:Vex<CR><C-W>r
+
 " [Ctrl + Z] undo
 nnoremap <silent> <C-Z> u
 vnoremap <silent> <C-Z> <C-C>u
