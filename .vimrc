@@ -34,6 +34,9 @@ set ttymouse=sgr
 " LMB goes into insert mode
 nnoremap <LeftMouse> <LeftMouse>a
 
+" Fix MMB copy-then-paste, instead of just pasting
+vnoremap <MiddleMouse> pi
+
 " Ensures normal mode when changing tabs/windows/buffers
 au BufLeave * call feedkeys("\<ESC>", 't')
 
