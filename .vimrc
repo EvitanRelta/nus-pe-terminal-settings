@@ -221,6 +221,9 @@ inoremap <silent> <C-A> <Esc>ggVG
 " [Ctrl + K] (normal mode) compile all .java file in current dir
 nnoremap <silent> <C-K> :!javac *.java<CR>
 
+" [Ctrl + B] (normal mode) vertical split diff with current file
+nnoremap <silent> <C-B> :vert diffsplit 
+
 " [Ctrl + F]
 " (normal/insert mode) clear highlights
 nnoremap <C-F> :noh<CR>
