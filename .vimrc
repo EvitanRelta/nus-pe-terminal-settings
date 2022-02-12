@@ -282,8 +282,8 @@ colorscheme codedark
 set colorcolumn=80
 
 " Delete selection
-vnoremap <BS> d
-vnoremap <Del> d
+vnoremap <BS> "_d
+vnoremap <Del> "_d
 
 " Disable error bell sounds
 set noerrorbells visualbell t_vb=
