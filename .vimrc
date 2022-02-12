@@ -193,6 +193,11 @@ noremap <silent> <C-G> :Vex!<CR>
 vnoremap <silent> <C-G> <C-C>:Vex!<CR>
 inoremap <silent> <C-G> <Esc>:Vex!<CR>
 
+" [Ctrl + Q] return to explorer
+noremap <silent> <C-Q> :Rex<CR>
+vnoremap <silent> <C-Q> <C-C>:Rex<CR>
+inoremap <silent> <C-Q> <Esc>:Rex<CR>
+
 " [Ctrl + N] swap split windows
 noremap <silent> <C-N> <C-W>r
 vnoremap <silent> <C-N> <C-W>r
