@@ -158,7 +158,7 @@ vnoremap <silent> v "_dP
 " [Ctrl + S] save
 nnoremap <silent> <C-S> :w!<CR>
 vnoremap <silent> <C-S> <C-C>:w!<CR>
-inoremap <silent> <C-S> <Esc>:w!<CR>i
+inoremap <silent> <C-S> <Esc>:w!<CR>a
 
 
 function! QuitWOSaving()
