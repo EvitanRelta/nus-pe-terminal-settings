@@ -218,8 +218,10 @@ nnoremap <silent> <C-A> ggVG
 vnoremap <silent> <C-A> <C-C>ggVG
 inoremap <silent> <C-A> <Esc>ggVG
 
-" [Ctrl + K] (normal mode) compile current file
+" [Ctrl + K] compile current file
 nnoremap <silent> <C-K> :!javac -Xlint:rawtypes %<CR>
+vnoremap <silent> <C-K> <C-C>:!javac -Xlint:rawtypes %<CR>
+inoremap <silent> <C-K> <Esc>:!javac -Xlint:rawtypes %<CR>
 
 " [Ctrl + B] (normal mode) vertical split diff with current file
 nnoremap <silent> <C-B> :vert diffsplit 
