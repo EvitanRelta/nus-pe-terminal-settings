@@ -73,13 +73,6 @@ set cul
 " set lazyredraw
 set ttyfast
 
-" For students who are used to using the psvm/sout/sop abbreviation, you can
-" uncomment the following.
-"
-abbr mainfn public static void main(String[] args){<CR><BS>
-abbr println System.out.println();<LEFT><LEFT>
-abbr printf System.out.printf();<LEFT><LEFT>
-
 "" PLUGINS
 " vim-rainbow
 " let g:rainbow_active = 1
