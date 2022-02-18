@@ -1,5 +1,5 @@
 source ./nonessentials/visual_replace.vim
-
+source ./nonessentials/find.vim
 
 " Turn on syntax highlighting
 syntax on
@@ -228,13 +228,6 @@ inoremap <silent> <C-K> <Esc>:!javac -Xlint:rawtypes %<CR>
 
 " [Ctrl + B] (normal mode) vertical split diff with current file
 nnoremap <silent> <C-B> :vert diffsplit 
-
-" [Ctrl + F]
-" (normal/insert mode) clear highlights
-nnoremap <C-F> :noh<CR>
-inoremap <C-F> <ESC>:noh<CR>a
-" (visual mode) find selected text
-vnoremap <C-F> y/<C-R>"<CR>
 
 " VSCode-like colorscheme
 colorscheme codedark
