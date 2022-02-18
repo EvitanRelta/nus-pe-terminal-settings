@@ -1,3 +1,6 @@
+source ./nonessentials/visual_replace.vim
+
+
 " Turn on syntax highlighting
 syntax on
 " Turn on smart auto-indentation
@@ -218,18 +221,6 @@ inoremap <C-F> <Esc>:noh<CR>a
 " (visual mode) find selected text
 vnoremap <C-F> y/<C-R>"<CR>
 
-
-function! Replace()
-  let isMultiLineSelection = line('v') != line('.')
-  if isMultiLineSelection
-    " Replace previously yanked text in selection
-    return ":s/\<C-R>\"//g\<Left>\<Left>"
-  endif
-  " Highlight selected text, and replace all selected text
-  return "y/\<C-R>\"\<CR>:%s/\<C-R>\"//g\<Left>\<Left>"
-endfunction
-" [CTRL + R] (visual)
-vnoremap <expr> <C-R> Replace()
 
 " [Ctrl + /] (visual) comment / uncomment selection
 function! JavaVisualCommentAndUncomment()

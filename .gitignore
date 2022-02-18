@@ -12,4 +12,5 @@
 !/.inputrc
 !/.vimrc
 !/README.md
-
+!/nonessentials/
+!/nonessentials/**
