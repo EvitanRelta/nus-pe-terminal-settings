@@ -301,20 +301,6 @@ set selection=exclusive
 " You'll have start vim in working directory first.
 argadd ./*.java
 
-
-function! LoadTemplate()
-  " Use .vim/templates/template.ext file, whr .ext is the new-file extension
-  silent! 0r ~/.vim/templates/template.%:e
-
-  " Replace all [FILE_NAME] with the new-file filename
-  %s/\[FILE_NAME\]/\=expand("%:t:r")/g
-  call cursor(3,5)
-  call feedkeys('a')
-endfunction
-
-" Use template when creating new .java files
-au BufNewFile *.java call LoadTemplate()
-
 " Start in insert mode
 " au BufRead,BufNewFile * startinsert
 
