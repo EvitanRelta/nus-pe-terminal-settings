@@ -246,40 +246,6 @@ endfunction
 " [CTRL + R] (visual)
 vnoremap <expr> <C-R> Replace()
 
-" [Ctrl + /] (visual) comment / uncomment selection
-function! JavaVisualCommentAndUncomment()
-  let isAllCommented = 1
-  let [startLine, endLine] = sort([line('v'), line('.')])
-
-  " Check if every line is commented
-  while startLine <= endLine
-    if getline(startLine) !~ "^\\s*//"
-      let isAllCommented = 0
-    endif
-    let startLine += 1
-  endwhile
-
-  if isAllCommented
-    return ":norm ^xx\<CR>"
-  else
-    return ":norm i//\<CR>"
-  endif
-endfunction
-au FileType java vnoremap <expr> <C-_> JavaVisualCommentAndUncomment()
-
-
-" [Ctrl + /] (insert) comment / uncomment line
-function! JavaInsertCommentAndUncomment()
-  let startingCol = col('.') - 1
-  let isCommented = getline('.') =~ "^\\s*//"
-  if isCommented
-    return "\<ESC>I\<DEL>\<DEL>\<ESC>" . (startingCol - 1) . "|i"
-  else
-    return "\<ESC>I//\<ESC>" . (startingCol + 3) . "|i"
-  endif
-endfunction
-au FileType java inoremap <expr> <C-_> JavaInsertCommentAndUncomment()
-
 " VSCode-like colorscheme
 colorscheme codedark
 
