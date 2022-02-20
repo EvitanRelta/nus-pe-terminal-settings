@@ -31,7 +31,7 @@ colo codedark
 argadd ./*.java
 
 " Indentation
-fu! TabFn()
+fu TabFn()
   if pumvisible()
     return "\<C-Y>"
   elseif getline('.')[col('.') - 2] !~ '\k'
