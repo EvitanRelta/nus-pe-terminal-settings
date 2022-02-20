@@ -4,7 +4,7 @@ source ./nonessentials/text_editor_like_selection.vim
 
 syn on
 filetype plugin indent on
-se ai si bk et ic vb tf lbr hls
+se ai si bk et ic vb tf lbr hls spr
 se scs cul wrap nocp wmnu noeb
 
 se sw=2
@@ -29,9 +29,6 @@ let g:delimitMate_expand_cr = 1
 au BufLeave * call feedkeys("\<Esc>", 't')
 colorscheme codedark
 argadd ./*.java
-
-" Set :vert to split right
-set splitright
 
 " Indentation
 function! TabFn()
