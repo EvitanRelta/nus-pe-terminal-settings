@@ -143,6 +143,3 @@ inoremap <silent> <C-K> <Esc>:!javac -Xlint:rawtypes %<CR>
 " Delete selection
 vnoremap <Bs> "_d
 vnoremap <Del> "_d
-
-" Start in insert mode
-" au BufRead,BufNewFile * startinsert
