@@ -193,7 +193,7 @@ inoremap <silent> <C-Z> <Esc>ui
 " [Ctrl + Y] redo
 nnoremap <silent> <C-Y> <C-R>
 vnoremap <silent> <C-Y> <C-C><C-R>
-inoremap <silent> <C-Y> <Esc><C-R>i
+inoremap <silent> <C-Y> <Esc><C-R>a
 
 " [Ctrl + A] visually select all
 nnoremap <silent> <C-A> ggVG
