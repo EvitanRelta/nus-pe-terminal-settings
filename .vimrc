@@ -29,12 +29,6 @@ au BufLeave * call feedkeys("\<Esc>", 't')
 colorscheme codedark
 argadd ./*.java
 
-" LMB goes into insert mode
-nnoremap <LeftMouse> <LeftMouse>a
-
-" Fix MMB copy-then-paste, instead of just pasting
-vnoremap <MiddleMouse> "_dPi
-
 " Indentation
 function! InsertTabWrapper()
   let col = col('.') - 1
@@ -47,13 +41,17 @@ function! InsertTabWrapper()
   endif
 endfunction
 nnoremap <Tab> >>
-inoremap <expr> <Tab> InsertTabWrapper()
 vnoremap <Tab> >gv
-
-" Decrease indentation
+inoremap <expr> <Tab> InsertTabWrapper()
 nnoremap <S-Tab> <<
 vnoremap <S-Tab> <gv
 inoremap <S-Tab> <C-D>
+
+" LMB goes into insert mode
+nnoremap <LeftMouse> <LeftMouse>a
+
+" Fix MMB copy-then-paste, instead of just pasting
+vnoremap <MiddleMouse> "_dPi
 
 noremap! <C-Bs> <C-W>
 noremap! <C-H> <C-W>
