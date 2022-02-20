@@ -2,19 +2,24 @@ source ./nonessentials/visual_replace.vim
 source ./nonessentials/find.vim
 
 syntax on
-set autoindent
-set smartindent
 filetype plugin indent on
-set backup
+set autoindent smartindent backup expandtab wrap linebreak nocompatible
+set wildmenu hlsearch ignorecase smartcase cul ttyfast noerrorbells visualbell
+
+set t_kb=
 set backupdir=~/.backup
-set expandtab
-set wrap
-set linebreak
-set nocompatible
 set shiftwidth=2
 set tabstop=2
 set mouse=a
 set ttymouse=sgr
+set wildmode=longest:list,full
+set laststatus=2
+set backspace=indent,eol,start
+set virtualedit=onemore
+set colorcolumn=80
+set selection=exclusive
+set t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 
 " LMB goes into insert mode
 nnoremap <LeftMouse> <LeftMouse>a
@@ -25,15 +30,6 @@ vnoremap <MiddleMouse> "_dPi
 " Ensures normal mode when changing tabs/windows/buffers
 au BufLeave * call feedkeys("\<ESC>", 't')
 
-set wildmenu 
-set wildmode=longest:list,full
-set hlsearch 
-set ignorecase 
-set smartcase
-set t_kb=
-set cul
-set ttyfast
-set laststatus=2
 let g:lightline = { 'colorscheme': 'deus' }
 
 " Indentation
@@ -62,7 +58,6 @@ let g:netrw_list_hide= '.*\.class$'
 " Open new split view ([V] in Netrw) on right instead of left
 let g:netrw_altv=1
 
-set backspace=indent,eol,start
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
 
@@ -91,8 +86,6 @@ vnoremap <UP> <ESC><UP>
 vnoremap <DOWN> <ESC><DOWN>
 vnoremap <S-UP> <UP>
 vnoremap <S-DOWN> <DOWN>
-
-set virtualedit=onemore
 
 " [Ctrl + D] deletes next word
 inoremap <C-D> X<Esc>ce
@@ -177,16 +170,9 @@ nnoremap <silent> <C-B> :vert diffsplit
 " VSCode-like colorscheme
 colorscheme codedark
 
-set colorcolumn=80
-
 " Delete selection
 vnoremap <BS> "_d
 vnoremap <Del> "_d
-
-set noerrorbells visualbell t_vb=
-autocmd GUIEnter * set visualbell t_vb=
-
-set selection=exclusive
 
 " Auto-complete keywords from every .java file in current dir
 " You'll have start vim in working directory first.
