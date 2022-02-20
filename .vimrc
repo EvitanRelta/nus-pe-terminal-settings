@@ -25,14 +25,15 @@ let g:netrw_list_hide='.*\.class$,^\./$'
 let g:netrw_altv=1
 let g:delimitMate_expand_cr = 1
 
+au BufLeave * call feedkeys("\<Esc>", 't')
+colorscheme codedark
+argadd ./*.java
+
 " LMB goes into insert mode
 nnoremap <LeftMouse> <LeftMouse>a
 
 " Fix MMB copy-then-paste, instead of just pasting
 vnoremap <MiddleMouse> "_dPi
-
-" Ensures normal mode when changing tabs/windows/buffers
-au BufLeave * call feedkeys("\<Esc>", 't')
 
 " Indentation
 function! InsertTabWrapper()
@@ -142,16 +143,9 @@ nnoremap <silent> <C-K> :!javac -Xlint:rawtypes %<CR>
 vnoremap <silent> <C-K> <C-C>:!javac -Xlint:rawtypes %<CR>
 inoremap <silent> <C-K> <Esc>:!javac -Xlint:rawtypes %<CR>
 
-" VSCode-like colorscheme
-colorscheme codedark
-
 " Delete selection
 vnoremap <Bs> "_d
 vnoremap <Del> "_d
-
-" Auto-complete keywords from every .java file in current dir
-" You'll have start vim in working directory first.
-argadd ./*.java
 
 " Start in insert mode
 " au BufRead,BufNewFile * startinsert
