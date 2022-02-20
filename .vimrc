@@ -27,7 +27,7 @@ let g:netrw_altv=1
 let g:delimitMate_expand_cr = 1
 
 au BufLeave * call feedkeys("\<Esc>", 't')
-colorscheme codedark
+colo codedark
 argadd ./*.java
 
 " Indentation
