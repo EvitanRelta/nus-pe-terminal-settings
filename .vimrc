@@ -62,11 +62,6 @@ vnoremap <Bs> "_d
 vnoremap <Del> "_d
 
 
-" [Ctrl + S] save
-nnoremap <silent> <C-S> :up!<CR>
-vnoremap <silent> <C-S> <C-C>:up!<CR>
-inoremap <silent> <C-S> <Esc>:up!<CR>a
-
 " [Ctrl + W] quit without saving
 nnoremap <silent> <C-W> :q!<CR>
 vnoremap <silent> <C-W> <C-C>:q!<CR>
@@ -87,27 +82,32 @@ nnoremap <silent> <C-Q> :Rex<CR>
 vnoremap <silent> <C-Q> <C-C>:Rex<CR>
 inoremap <silent> <C-Q> <Esc>:Rex<CR>
 
-" [Ctrl + N] swap split windows
-nnoremap <silent> <C-N> <C-W>r
-vnoremap <silent> <C-N> <C-C><C-W>r
-inoremap <silent> <C-N> <Esc><C-W>ra
-
-" [Ctrl + Z] undo
-nnoremap <silent> <C-Z> u
-vnoremap <silent> <C-Z> <C-C>u
-inoremap <silent> <C-Z> <Esc>ui
-
-" [Ctrl + Y] redo
-nnoremap <silent> <C-Y> <C-R>
-vnoremap <silent> <C-Y> <C-C><C-R>
-inoremap <silent> <C-Y> <Esc><C-R>a
+" [Ctrl + K] compile current file
+nnoremap <silent> <C-K> :!javac -Xlint:rawtypes %<CR>
+vnoremap <silent> <C-K> <C-C>:!javac -Xlint:rawtypes %<CR>
+inoremap <silent> <C-K> <Esc>:!javac -Xlint:rawtypes %<CR>
 
 " [Ctrl + A] visually select all
 nnoremap <silent> <C-A> ggVG
 vnoremap <silent> <C-A> <C-C>ggVG
 inoremap <silent> <C-A> <Esc>ggVG
 
-" [Ctrl + K] compile current file
-nnoremap <silent> <C-K> :!javac -Xlint:rawtypes %<CR>
-vnoremap <silent> <C-K> <C-C>:!javac -Xlint:rawtypes %<CR>
-inoremap <silent> <C-K> <Esc>:!javac -Xlint:rawtypes %<CR>
+" [Ctrl + N] swap split windows
+nnoremap <silent> <C-N> <C-W>r
+vnoremap <silent> <C-N> <C-C><C-W>r
+inoremap <silent> <C-N> <Esc><C-W>ra
+
+" [Ctrl + S] save
+nnoremap <silent> <C-S> :up!<CR>
+vnoremap <silent> <C-S> <C-C>:up!<CR>
+inoremap <silent> <C-S> <Esc>:up!<CR>a
+
+" [Ctrl + Y] redo
+nnoremap <silent> <C-Y> <C-R>
+vnoremap <silent> <C-Y> <C-C><C-R>
+inoremap <silent> <C-Y> <Esc><C-R>a
+
+" [Ctrl + Z] undo
+nnoremap <silent> <C-Z> u
+vnoremap <silent> <C-Z> <C-C>u
+inoremap <silent> <C-Z> <Esc>ui
