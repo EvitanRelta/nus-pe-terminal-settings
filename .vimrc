@@ -1,5 +1,6 @@
 source ./nonessentials/visual_replace.vim
 source ./nonessentials/find.vim
+source ./nonessentials/text_editor_like_selection.vim
 
 " Turn on syntax highlighting
 syntax on
@@ -122,32 +123,6 @@ let g:netrw_altv=1
 set backspace=indent,eol,start
 noremap! <C-Bs> <C-W>
 noremap! <C-H> <C-W>
-
-" Shift selection
-inoremap <S-Home> <C-O>v<Home>
-inoremap <S-End> <C-O>v<End>
-inoremap <C-S-Left> <C-O>v<C-Left>
-inoremap <C-S-Right> <C-O>v<C-Right>
-inoremap <S-Left> <C-O>v<Left>
-inoremap <S-Right> <C-O>v<Right>
-inoremap <S-Up> <C-O>v<Up>
-inoremap <S-Down> <C-O>v<Down>
-
-" Make visual insert mode more like normal text editor
-vnoremap <Home> <Esc><Home>
-vnoremap <End> <Esc><End>
-vnoremap <S-Home> <Home>
-vnoremap <S-End> <End>
-
-vnoremap <Left> <Esc><Left>
-vnoremap <Right> <Esc><Right>
-vnoremap <S-Left> <Left>
-vnoremap <S-Right> <Right>
-
-vnoremap <Up> <Esc><Up>
-vnoremap <Down> <Esc><Down>
-vnoremap <S-Up> <Up>
-vnoremap <S-Down> <Down>
 
 " Fix not selecting last character if cursor at end of line
 set virtualedit=onemore
