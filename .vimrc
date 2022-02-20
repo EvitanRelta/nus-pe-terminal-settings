@@ -142,9 +142,6 @@ nnoremap <silent> <C-K> :!javac -Xlint:rawtypes %<CR>
 vnoremap <silent> <C-K> <C-C>:!javac -Xlint:rawtypes %<CR>
 inoremap <silent> <C-K> <Esc>:!javac -Xlint:rawtypes %<CR>
 
-" [Ctrl + B] (normal mode) vertical split diff with current file
-nnoremap <silent> <C-B> :vert diffsplit 
-
 " VSCode-like colorscheme
 colorscheme codedark
 
