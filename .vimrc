@@ -30,6 +30,7 @@ au BufLeave * call feedkeys("\<Esc>", 't')
 colorscheme codedark
 argadd ./*.java
 
+
 " Indentation
 function! TabFn()
   if pumvisible()
@@ -47,23 +48,20 @@ nnoremap <S-Tab> <<
 vnoremap <S-Tab> <gv
 inoremap <S-Tab> <C-D>
 
-" LMB goes into insert mode
+
+" Misc
 nnoremap <LeftMouse> <LeftMouse>a
-
-" Fix MMB copy-then-paste, instead of just pasting
 vnoremap <MiddleMouse> "_dPi
-
 noremap! <C-Bs> <C-W>
+
 noremap! <C-H> <C-W>
-
-" [Ctrl + D] deletes next word
 inoremap <C-D> X<Esc>ce
-
-" [C] (visual) yank
 vnoremap <silent> c y
 
-" [V] (visual) paste
 vnoremap <silent> v "_dP
+vnoremap <Bs> "_d
+vnoremap <Del> "_d
+
 
 " [Ctrl + S] save
 nnoremap <silent> <C-S> :up!<CR>
@@ -114,7 +112,3 @@ inoremap <silent> <C-A> <Esc>ggVG
 nnoremap <silent> <C-K> :!javac -Xlint:rawtypes %<CR>
 vnoremap <silent> <C-K> <C-C>:!javac -Xlint:rawtypes %<CR>
 inoremap <silent> <C-K> <Esc>:!javac -Xlint:rawtypes %<CR>
-
-" Delete selection
-vnoremap <Bs> "_d
-vnoremap <Del> "_d
