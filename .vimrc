@@ -182,8 +182,8 @@ inoremap <silent> <C-Q> <Esc>:Rex<CR>
 
 " [Ctrl + N] swap split windows
 nnoremap <silent> <C-N> <C-W>r
-vnoremap <silent> <C-N> <C-W>r
-inoremap <silent> <C-N> <C-W>r
+vnoremap <silent> <C-N> <C-C><C-W>r
+inoremap <silent> <C-N> <Esc><C-W>ra
 
 " [Ctrl + Z] undo
 nnoremap <silent> <C-Z> u
