@@ -1,3 +1,11 @@
+# Vim settings for CS2030S
+
+For when you need to use Vim, but you prefer the normal text-editor-like experience.
+
+The simplified settings for PE can be found in the `simplified` branch.
+
+<br><br>
+
 ## Plugins to install
 
 ```bash
