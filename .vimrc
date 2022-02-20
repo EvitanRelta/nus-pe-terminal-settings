@@ -30,11 +30,10 @@ colorscheme codedark
 argadd ./*.java
 
 " Indentation
-function! InsertTabWrapper()
-  let col = col('.') - 1
+function! TabFn()
   if pumvisible()
     return "\<C-Y>"
-  elseif !col || getline('.')[col - 1] !~ '\k'
+  elseif getline('.')[col('.') - 2] !~ '\k'
     return "\<Tab>"
   else
     return "\<C-P>"
@@ -42,7 +41,7 @@ function! InsertTabWrapper()
 endfunction
 nnoremap <Tab> >>
 vnoremap <Tab> >gv
-inoremap <expr> <Tab> InsertTabWrapper()
+inoremap <expr> <Tab> TabFn()
 nnoremap <S-Tab> <<
 vnoremap <S-Tab> <gv
 inoremap <S-Tab> <C-D>
