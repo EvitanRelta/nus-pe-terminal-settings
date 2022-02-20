@@ -117,8 +117,8 @@ inoremap <silent> <C-Q> <Esc>:Rex<CR>
 
 " [Ctrl + N] swap split windows
 nnoremap <silent> <C-N> <C-W>r
-vnoremap <silent> <C-N> <C-W>r
-inoremap <silent> <C-N> <C-W>r
+vnoremap <silent> <C-N> <C-C><C-W>r
+inoremap <silent> <C-N> <Esc><C-W>ra
 
 " [Ctrl + Z] undo
 nnoremap <silent> <C-Z> u
@@ -128,7 +128,7 @@ inoremap <silent> <C-Z> <Esc>ui
 " [Ctrl + Y] redo
 nnoremap <silent> <C-Y> <C-R>
 vnoremap <silent> <C-Y> <C-C><C-R>
-inoremap <silent> <C-Y> <Esc><C-R>i
+inoremap <silent> <C-Y> <Esc><C-R>a
 
 " [Ctrl + A] visually select all
 nnoremap <silent> <C-A> ggVG
