@@ -1,7 +1,7 @@
 source ./nonessentials/visual_replace.vim
 source ./nonessentials/find.vim
 
-syntax on
+syn on
 filetype plugin indent on
 se ai si bk et ic vb tf lbr hls
 se scs cul wrap nocp wmnu noeb
