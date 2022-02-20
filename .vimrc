@@ -38,7 +38,7 @@ nnoremap <LeftMouse> <LeftMouse>a
 vnoremap <MiddleMouse> "_dPi
 
 " Ensures normal mode when changing tabs/windows/buffers
-au BufLeave * call feedkeys("\<ESC>", 't')
+au BufLeave * call feedkeys("\<Esc>", 't')
 
 " uncomment the following to show ruler (line,colum position)
 " set ruler 
@@ -73,9 +73,9 @@ set ttyfast
 " For students who are used to using the psvm/sout/sop abbreviation, you can
 " uncomment the following.
 "
-abbr mainfn public static void main(String[] args){<CR><BS>
-abbr println System.out.println();<LEFT><LEFT>
-abbr printf System.out.printf();<LEFT><LEFT>
+abbr mainfn public static void main(String[] args){<CR><Bs>
+abbr println System.out.println();<Left><Left>
+abbr printf System.out.printf();<Left><Left>
 
 "" PLUGINS
 " vim-rainbow
@@ -89,21 +89,21 @@ let g:lightline={ 'colorscheme': 'deus' }
 function! InsertTabWrapper()
   let col = col('.') - 1
   if pumvisible()
-    return "\<C-y>"
+    return "\<C-Y>"
   elseif !col || getline('.')[col - 1] !~ '\k'
-    return "\<tab>"
+    return "\<Tab>"
   else
-    return "\<c-p>"
+    return "\<C-P>"
   endif
 endfunction
 nnoremap <Tab> >>
-inoremap <expr> <tab> InsertTabWrapper()
+inoremap <expr> <Tab> InsertTabWrapper()
 vnoremap <Tab> >gv
 
 " Decrease indentation
 nnoremap <S-Tab> <<
 vnoremap <S-Tab> <gv
-inoremap <S-Tab> <C-d>
+inoremap <S-Tab> <C-D>
 
 " Hide compiled java files
 let g:netrw_list_hide='.*\.class$,^\./$'
@@ -114,34 +114,34 @@ let g:netrw_altv=1
 " [Ctrl + Backspace] deletes previous word
 " Requires 'stty -ixon' in ./bash_profile 
 set backspace=indent,eol,start
-noremap! <C-BS> <C-w>
-noremap! <C-h> <C-w>
+noremap! <C-Bs> <C-W>
+noremap! <C-H> <C-W>
 
 " Shift selection
-inoremap <S-HOME> <C-O>v<HOME>
-inoremap <S-END> <C-O>v<END>
-inoremap <C-S-LEFT> <C-O>v<C-LEFT>
-inoremap <C-S-RIGHT> <C-O>v<C-RIGHT>
-inoremap <S-LEFT> <C-O>v<LEFT>
-inoremap <S-RIGHT> <C-O>v<RIGHT>
-inoremap <S-UP> <C-O>v<UP>
-inoremap <S-DOWN> <C-O>v<DOWN>
+inoremap <S-Home> <C-O>v<Home>
+inoremap <S-End> <C-O>v<End>
+inoremap <C-S-Left> <C-O>v<C-Left>
+inoremap <C-S-Right> <C-O>v<C-Right>
+inoremap <S-Left> <C-O>v<Left>
+inoremap <S-Right> <C-O>v<Right>
+inoremap <S-Up> <C-O>v<Up>
+inoremap <S-Down> <C-O>v<Down>
 
 " Make visual insert mode more like normal text editor
-vnoremap <HOME> <ESC><HOME>
-vnoremap <END> <ESC><END>
-vnoremap <S-HOME> <HOME>
-vnoremap <S-END> <END>
+vnoremap <Home> <Esc><Home>
+vnoremap <End> <Esc><End>
+vnoremap <S-Home> <Home>
+vnoremap <S-End> <End>
 
-vnoremap <LEFT> <ESC><LEFT>
-vnoremap <RIGHT> <ESC><RIGHT>
-vnoremap <S-LEFT> <LEFT>
-vnoremap <S-RIGHT> <RIGHT>
+vnoremap <Left> <Esc><Left>
+vnoremap <Right> <Esc><Right>
+vnoremap <S-Left> <Left>
+vnoremap <S-Right> <Right>
 
-vnoremap <UP> <ESC><UP>
-vnoremap <DOWN> <ESC><DOWN>
-vnoremap <S-UP> <UP>
-vnoremap <S-DOWN> <DOWN>
+vnoremap <Up> <Esc><Up>
+vnoremap <Down> <Esc><Down>
+vnoremap <S-Up> <Up>
+vnoremap <S-Down> <Down>
 
 " Fix not selecting last character if cursor at end of line
 set virtualedit=onemore
@@ -211,7 +211,7 @@ nnoremap <silent> <C-B> :vert diffsplit
 " [Ctrl + F]
 " (normal/insert mode) clear highlights
 nnoremap <C-F> :noh<CR>
-inoremap <C-F> <ESC>:noh<CR>a
+inoremap <C-F> <Esc>:noh<CR>a
 " (visual mode) find selected text
 vnoremap <C-F> y/<C-R>"<CR>
 
@@ -220,10 +220,10 @@ function! Replace()
   let isMultiLineSelection = line('v') != line('.')
   if isMultiLineSelection
     " Replace previously yanked text in selection
-    return ":s/\<C-R>\"//g\<LEFT>\<LEFT>"
+    return ":s/\<C-R>\"//g\<Left>\<Left>"
   endif
   " Highlight selected text, and replace all selected text
-  return "y/\<C-R>\"\<CR>:%s/\<C-R>\"//g\<LEFT>\<LEFT>"
+  return "y/\<C-R>\"\<CR>:%s/\<C-R>\"//g\<Left>\<Left>"
 endfunction
 " [CTRL + R] (visual)
 vnoremap <expr> <C-R> Replace()
@@ -255,9 +255,9 @@ function! JavaInsertCommentAndUncomment()
   let startingCol = col('.') - 1
   let isCommented = getline('.') =~ "^\\s*//"
   if isCommented
-    return "\<ESC>I\<DEL>\<DEL>\<ESC>" . (startingCol - 1) . "|i"
+    return "\<Esc>I\<Del>\<Del>\<Esc>" . (startingCol - 1) . "|i"
   else
-    return "\<ESC>I//\<ESC>" . (startingCol + 3) . "|i"
+    return "\<Esc>I//\<Esc>" . (startingCol + 3) . "|i"
   endif
 endfunction
 au FileType java inoremap <expr> <C-_> JavaInsertCommentAndUncomment()
@@ -269,7 +269,7 @@ colorscheme codedark
 set colorcolumn=80
 
 " Delete selection
-vnoremap <BS> "_d
+vnoremap <Bs> "_d
 vnoremap <Del> "_d
 
 " Disable error bell sounds
