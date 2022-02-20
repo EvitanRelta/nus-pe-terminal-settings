@@ -29,7 +29,7 @@ vnoremap <MiddleMouse> "_dPi
 " Ensures normal mode when changing tabs/windows/buffers
 au BufLeave * call feedkeys("\<ESC>", 't')
 
-let g:lightline = { 'colorscheme': 'deus' }
+let g:lightline={ 'colorscheme': 'deus' }
 
 " Indentation
 function! InsertTabWrapper()
@@ -52,7 +52,7 @@ vnoremap <S-Tab> <gv
 inoremap <S-Tab> <C-d>
 
 " Hide compiled java files
-let g:netrw_list_hide= '.*\.class$'
+let g:netrw_list_hide='.*\.class$,^\./$'
 
 " Open new split view ([V] in Netrw) on right instead of left
 let g:netrw_altv=1
