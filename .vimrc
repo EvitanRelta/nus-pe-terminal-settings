@@ -106,7 +106,7 @@ vnoremap <S-Tab> <gv
 inoremap <S-Tab> <C-d>
 
 " Hide compiled java files
-let g:netrw_list_hide='.*\.class$'
+let g:netrw_list_hide='.*\.class$,^\./$'
 
 " Open new split view ([V] in Netrw) on right instead of left
 let g:netrw_altv=1
