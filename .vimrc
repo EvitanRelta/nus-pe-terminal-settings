@@ -19,7 +19,6 @@ se ve=onemore
 se cc=80
 se sel=exclusive
 se t_vb=
-au GUIEnter * se vb t_vb=
 
 " LMB goes into insert mode
 nnoremap <LeftMouse> <LeftMouse>a
