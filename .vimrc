@@ -1,37 +1,19 @@
 source ./nonessentials/visual_replace.vim
 source ./nonessentials/find.vim
 
-" Turn on syntax highlighting
 syntax on
-" Turn on smart auto-indentation
 set autoindent
 set smartindent
 filetype plugin indent on
-" Turn on auto-backup before editing
 set backup
-" Use ~/.backup as the backup directory
 set backupdir=~/.backup
-" Replace all tab with spaces
 set expandtab
-" Wrap long line at reasonable places (only affect 
-" display, not content)
 set wrap
 set linebreak
-" Make vim less like vi
 set nocompatible
-" Make default indent at 2 spaces
 set shiftwidth=2
-" Set tab stop to 2
 set tabstop=2
-
-" uncomment to turn on line number
-" "set number
-
-" vim is optimized for keyboard-only, but if you insist on using mouse,
-" uncomment the following
 set mouse=a
-
-" Fix mouse not working on split screens
 set ttymouse=sgr
 
 " LMB goes into insert mode
@@ -43,41 +25,14 @@ vnoremap <MiddleMouse> "_dPi
 " Ensures normal mode when changing tabs/windows/buffers
 au BufLeave * call feedkeys("\<ESC>", 't')
 
-" uncomment the following to show ruler (line,colum position)
-" set ruler 
-
-" some advanced options requested by students.  Use them only if
-" you know what you are doing (I don't know what they do!)
-" set hidden 
 set wildmenu 
 set wildmode=longest:list,full
-" set showcmd 
 set hlsearch 
-" set confirm 
-" set visualbell 
 set ignorecase 
 set smartcase
-
-" The following should give 16 colors on old Windows machine
-"set t_AB=[%?%p1%{8}%<%t%p1%{40}%+%e%p1%{92}%+%;%dm
-"set t_AF=[%?%p1%{8}%<%t%p1%{30}%+%e%p1%{82}%+%;%dm
-"set t_Co=16
-
-" The following change the backspace on old Windows machine
 set t_kb=
-
-" Highlight cursor line
 set cul
-
-" Speed boost
-" set lazyredraw
 set ttyfast
-
-"" PLUGINS
-" vim-rainbow
-" let g:rainbow_active = 1
-
-" For lightline
 set laststatus=2
 let g:lightline = { 'colorscheme': 'deus' }
 
@@ -107,8 +62,6 @@ let g:netrw_list_hide= '.*\.class$'
 " Open new split view ([V] in Netrw) on right instead of left
 let g:netrw_altv=1
 
-" [Ctrl + Backspace] deletes previous word
-" Requires 'stty -ixon' in ./bash_profile 
 set backspace=indent,eol,start
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
@@ -139,7 +92,6 @@ vnoremap <DOWN> <ESC><DOWN>
 vnoremap <S-UP> <UP>
 vnoremap <S-DOWN> <DOWN>
 
-" Fix not selecting last character if cursor at end of line
 set virtualedit=onemore
 
 " [Ctrl + D] deletes next word
@@ -225,18 +177,15 @@ nnoremap <silent> <C-B> :vert diffsplit
 " VSCode-like colorscheme
 colorscheme codedark
 
-" Highlight 80 char boundary
 set colorcolumn=80
 
 " Delete selection
 vnoremap <BS> "_d
 vnoremap <Del> "_d
 
-" Disable error bell sounds
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
-" Prevent selecting newline in visual mode
 set selection=exclusive
 
 " Auto-complete keywords from every .java file in current dir
