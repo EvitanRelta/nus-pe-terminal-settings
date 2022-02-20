@@ -1,5 +1,5 @@
 " Vim replace commands to run (in order):
-" 1. :%s/\v^(.?)\@([A-Z]) (.+)/nn \<silent\> \<C-\2\> \3\rvn \<silent\> \<C-\2\> \<C-C\>\3\rin <silent> \<C-\2\> \<Esc\>\3\1\r/g
+" 1. :%s/\v^(.?)#([A-Z]) (.+)/nn \<silent\> \<C-\2\> \3\rvn \<silent\> \<C-\2\> \<C-C\>\3\rin <silent> \<C-\2\> \<Esc\>\3\1\r/g
 " 2. :%s/\v^([nvi]+)/\1oremap/g
 
 syn on
@@ -63,16 +63,16 @@ vn <Del> "_d
 
 
 " NVI (Normal/Visual/Insert) Keybinds
-@W :q!<CR>
-@T :Tex<CR>
-@G :Vex!<CR>
+#W :q!<CR>
+#T :Tex<CR>
+#G :Vex!<CR>
 
-@Q :Rex<CR>
-@K :!javac -Xlint:rawtypes %<CR>
-@A ggVG
+#Q :Rex<CR>
+#K :!javac -Xlint:rawtypes %<CR>
+#A ggVG
 
-a@N <C-W>r
-a@S :up!<CR>
-a@Y <C-R>
+a#N <C-W>r
+a#S :up!<CR>
+a#Y <C-R>
 
-i@Z u
+i#Z u
