@@ -166,22 +166,22 @@ vnoremap <silent> <C-W> <C-C>:q!<CR>
 inoremap <silent> <C-W> <Esc>:q!<CR>
 
 " [Ctrl + T] new explorer tab
-noremap <silent> <C-T> :Tex<CR>
+nnoremap <silent> <C-T> :Tex<CR>
 vnoremap <silent> <C-T> <C-C>:Tex<CR>
 inoremap <silent> <C-T> <Esc>:Tex<CR>
 
 " [Ctrl + G] new explorer split
-noremap <silent> <C-G> :Vex!<CR>
+nnoremap <silent> <C-G> :Vex!<CR>
 vnoremap <silent> <C-G> <C-C>:Vex!<CR>
 inoremap <silent> <C-G> <Esc>:Vex!<CR>
 
 " [Ctrl + Q] return to explorer
-noremap <silent> <C-Q> :Rex<CR>
+nnoremap <silent> <C-Q> :Rex<CR>
 vnoremap <silent> <C-Q> <C-C>:Rex<CR>
 inoremap <silent> <C-Q> <Esc>:Rex<CR>
 
 " [Ctrl + N] swap split windows
-noremap <silent> <C-N> <C-W>r
+nnoremap <silent> <C-N> <C-W>r
 vnoremap <silent> <C-N> <C-W>r
 inoremap <silent> <C-N> <C-W>r
 
