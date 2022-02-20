@@ -62,52 +62,43 @@ vnoremap <Bs> "_d
 vnoremap <Del> "_d
 
 
-" [Ctrl + W] quit without saving
+" NVI (Normal/Visual/Insert) Keybinds
 nnoremap <silent> <C-W> :q!<CR>
 vnoremap <silent> <C-W> <C-C>:q!<CR>
 inoremap <silent> <C-W> <Esc>:q!<CR>
 
-" [Ctrl + T] new explorer tab
 nnoremap <silent> <C-T> :Tex<CR>
 vnoremap <silent> <C-T> <C-C>:Tex<CR>
 inoremap <silent> <C-T> <Esc>:Tex<CR>
 
-" [Ctrl + G] new explorer split
 nnoremap <silent> <C-G> :Vex!<CR>
 vnoremap <silent> <C-G> <C-C>:Vex!<CR>
 inoremap <silent> <C-G> <Esc>:Vex!<CR>
 
-" [Ctrl + Q] return to explorer
 nnoremap <silent> <C-Q> :Rex<CR>
 vnoremap <silent> <C-Q> <C-C>:Rex<CR>
 inoremap <silent> <C-Q> <Esc>:Rex<CR>
 
-" [Ctrl + K] compile current file
 nnoremap <silent> <C-K> :!javac -Xlint:rawtypes %<CR>
 vnoremap <silent> <C-K> <C-C>:!javac -Xlint:rawtypes %<CR>
 inoremap <silent> <C-K> <Esc>:!javac -Xlint:rawtypes %<CR>
 
-" [Ctrl + A] visually select all
 nnoremap <silent> <C-A> ggVG
 vnoremap <silent> <C-A> <C-C>ggVG
 inoremap <silent> <C-A> <Esc>ggVG
 
-" [Ctrl + N] swap split windows
 nnoremap <silent> <C-N> <C-W>r
 vnoremap <silent> <C-N> <C-C><C-W>r
 inoremap <silent> <C-N> <Esc><C-W>ra
 
-" [Ctrl + S] save
 nnoremap <silent> <C-S> :up!<CR>
 vnoremap <silent> <C-S> <C-C>:up!<CR>
 inoremap <silent> <C-S> <Esc>:up!<CR>a
 
-" [Ctrl + Y] redo
 nnoremap <silent> <C-Y> <C-R>
 vnoremap <silent> <C-Y> <C-C><C-R>
 inoremap <silent> <C-Y> <Esc><C-R>a
 
-" [Ctrl + Z] undo
 nnoremap <silent> <C-Z> u
 vnoremap <silent> <C-Z> <C-C>u
 inoremap <silent> <C-Z> <Esc>ui
