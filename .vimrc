@@ -100,28 +100,10 @@ nnoremap <silent> <C-S> :w!<CR>
 vnoremap <silent> <C-S> <C-C>:w!<CR>
 inoremap <silent> <C-S> <Esc>:w!<CR>a
 
-
-function! QuitWOSaving()
-  if &ft ==# "netrw"
-    :q!
-  else
-    let numOfWindows = len(range(1, winnr('$')))
-    let numOfTabs = len(range(1, tabpagenr('$')))
-    if numOfWindows != 1 || numOfTabs != 1
-      :q!
-      return
-    endif
-    try
-      :Rex
-    catch
-      :q!
-    endtry
-  endif
-endfunction
 " [Ctrl + W] quit without saving
-nnoremap <silent> <C-W> :call QuitWOSaving()<CR>
-vnoremap <silent> <C-W> <C-C>:call QuitWOSaving()<CR>
-inoremap <silent> <C-W> <Esc>:call QuitWOSaving()<CR>
+nnoremap <silent> <C-W> :q!<CR>
+vnoremap <silent> <C-W> <C-C>:q!<CR>
+inoremap <silent> <C-W> <Esc>:q!<CR>
 
 " [Ctrl + T] new explorer tab
 noremap <silent> <C-T> :Tex<CR>
