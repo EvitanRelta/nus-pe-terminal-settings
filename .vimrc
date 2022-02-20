@@ -3,23 +3,23 @@ source ./nonessentials/find.vim
 
 syntax on
 filetype plugin indent on
-set autoindent smartindent backup expandtab wrap linebreak nocompatible
-set wildmenu hlsearch ignorecase smartcase cul ttyfast noerrorbells visualbell
+se ai si bk et wrap lbr nocp
+se wmnu hls ic scs cul tf noeb vb
 
-set t_kb=
-set backupdir=~/.backup
-set shiftwidth=2
-set tabstop=2
-set mouse=a
-set ttymouse=sgr
-set wildmode=longest:list,full
-set laststatus=2
-set backspace=indent,eol,start
-set virtualedit=onemore
-set colorcolumn=80
-set selection=exclusive
-set t_vb=
-autocmd GUIEnter * set visualbell t_vb=
+se t_kb=
+se bdir=~/.backup
+se sw=2
+se ts=2
+se mouse=a
+se ttym=sgr
+se wim=longest:list,full
+se ls=2
+se bs=indent,eol,start
+se ve=onemore
+se cc=80
+se sel=exclusive
+se t_vb=
+au GUIEnter * se vb t_vb=
 
 " LMB goes into insert mode
 nnoremap <LeftMouse> <LeftMouse>a
