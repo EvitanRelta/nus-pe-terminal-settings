@@ -32,56 +32,56 @@ nnoremap <LeftMouse> <LeftMouse>a
 vnoremap <MiddleMouse> "_dPi
 
 " Ensures normal mode when changing tabs/windows/buffers
-au BufLeave * call feedkeys("\<ESC>", 't')
+au BufLeave * call feedkeys("\<Esc>", 't')
 
 " Indentation
 function! InsertTabWrapper()
   let col = col('.') - 1
   if pumvisible()
-    return "\<C-y>"
+    return "\<C-Y>"
   elseif !col || getline('.')[col - 1] !~ '\k'
-    return "\<tab>"
+    return "\<Tab>"
   else
-    return "\<c-p>"
+    return "\<C-P>"
   endif
 endfunction
 nnoremap <Tab> >>
-inoremap <expr> <tab> InsertTabWrapper()
+inoremap <expr> <Tab> InsertTabWrapper()
 vnoremap <Tab> >gv
 
 " Decrease indentation
 nnoremap <S-Tab> <<
 vnoremap <S-Tab> <gv
-inoremap <S-Tab> <C-d>
+inoremap <S-Tab> <C-D>
 
-noremap! <C-BS> <C-w>
-noremap! <C-h> <C-w>
+noremap! <C-Bs> <C-W>
+noremap! <C-H> <C-W>
 
 " Shift selection
-inoremap <S-HOME> <C-O>v<HOME>
-inoremap <S-END> <C-O>v<END>
-inoremap <C-S-LEFT> <C-O>v<C-LEFT>
-inoremap <C-S-RIGHT> <C-O>v<C-RIGHT>
-inoremap <S-LEFT> <C-O>v<LEFT>
-inoremap <S-RIGHT> <C-O>v<RIGHT>
-inoremap <S-UP> <C-O>v<UP>
-inoremap <S-DOWN> <C-O>v<DOWN>
+inoremap <S-Home> <C-O>v<Home>
+inoremap <S-End> <C-O>v<End>
+inoremap <C-S-Left> <C-O>v<C-Left>
+inoremap <C-S-Right> <C-O>v<C-Right>
+inoremap <S-Left> <C-O>v<Left>
+inoremap <S-Right> <C-O>v<Right>
+inoremap <S-Up> <C-O>v<Up>
+inoremap <S-Down> <C-O>v<Down>
 
 " Make visual insert mode more like normal text editor
-vnoremap <HOME> <ESC><HOME>
-vnoremap <END> <ESC><END>
-vnoremap <S-HOME> <HOME>
-vnoremap <S-END> <END>
+vnoremap <Home> <Esc><Home>
+vnoremap <End> <Esc><End>
+vnoremap <S-Home> <Home>
+vnoremap <S-End> <End>
 
-vnoremap <LEFT> <ESC><LEFT>
-vnoremap <RIGHT> <ESC><RIGHT>
-vnoremap <S-LEFT> <LEFT>
-vnoremap <S-RIGHT> <RIGHT>
+vnoremap <Left> <Esc><Left>
+vnoremap <Right> <Esc><Right>
+vnoremap <S-Left> <Left>
+vnoremap <S-Right> <Right>
 
-vnoremap <UP> <ESC><UP>
-vnoremap <DOWN> <ESC><DOWN>
-vnoremap <S-UP> <UP>
-vnoremap <S-DOWN> <DOWN>
+vnoremap <Up> <Esc><Up>
+vnoremap <Down> <Esc><Down>
+vnoremap <S-Up> <Up>
+vnoremap <S-Down> <Down>
 
 " [Ctrl + D] deletes next word
 inoremap <C-D> X<Esc>ce
@@ -103,22 +103,22 @@ vnoremap <silent> <C-W> <C-C>:q!<CR>
 inoremap <silent> <C-W> <Esc>:q!<CR>
 
 " [Ctrl + T] new explorer tab
-noremap <silent> <C-T> :Tex<CR>
+nnoremap <silent> <C-T> :Tex<CR>
 vnoremap <silent> <C-T> <C-C>:Tex<CR>
 inoremap <silent> <C-T> <Esc>:Tex<CR>
 
 " [Ctrl + G] new explorer split
-noremap <silent> <C-G> :Vex!<CR>
+nnoremap <silent> <C-G> :Vex!<CR>
 vnoremap <silent> <C-G> <C-C>:Vex!<CR>
 inoremap <silent> <C-G> <Esc>:Vex!<CR>
 
 " [Ctrl + Q] return to explorer
-noremap <silent> <C-Q> :Rex<CR>
+nnoremap <silent> <C-Q> :Rex<CR>
 vnoremap <silent> <C-Q> <C-C>:Rex<CR>
 inoremap <silent> <C-Q> <Esc>:Rex<CR>
 
 " [Ctrl + N] swap split windows
-noremap <silent> <C-N> <C-W>r
+nnoremap <silent> <C-N> <C-W>r
 vnoremap <silent> <C-N> <C-W>r
 inoremap <silent> <C-N> <C-W>r
 
@@ -146,7 +146,7 @@ inoremap <silent> <C-K> <Esc>:!javac -Xlint:rawtypes %<CR>
 colorscheme codedark
 
 " Delete selection
-vnoremap <BS> "_d
+vnoremap <Bs> "_d
 vnoremap <Del> "_d
 
 " Auto-complete keywords from every .java file in current dir
