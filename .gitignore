@@ -13,4 +13,4 @@
 !/.vimrc
 !/README.md
 !/nonessentials/
-!/nonessentials/**
+!/nonessentials/*.vim
