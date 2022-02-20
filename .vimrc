@@ -156,9 +156,9 @@ vnoremap <silent> c y
 vnoremap <silent> v "_dP
 
 " [Ctrl + S] save
-nnoremap <silent> <C-S> :w!<CR>
-vnoremap <silent> <C-S> <C-C>:w!<CR>
-inoremap <silent> <C-S> <Esc>:w!<CR>a
+nnoremap <silent> <C-S> :up!<CR>
+vnoremap <silent> <C-S> <C-C>:up!<CR>
+inoremap <silent> <C-S> <Esc>:up!<CR>a
 
 " [Ctrl + W] quit without saving
 nnoremap <silent> <C-W> :q!<CR>
