@@ -3,22 +3,22 @@ source ./nonessentials/find.vim
 
 syntax on
 filetype plugin indent on
-se ai si bk et wrap lbr nocp
-se wmnu hls ic scs cul tf noeb vb
+se ai si bk et ic vb tf lbr hls
+se scs cul wrap nocp wmnu noeb
 
-se t_kb=
-se bdir=~/.backup
 se sw=2
 se ts=2
+se ls=2
+se bdir=~/.backup
+se cc=80
+se t_vb=
+se t_kb=
+se bs=indent,eol,start
 se mouse=a
 se ttym=sgr
-se wim=longest:list,full
-se ls=2
-se bs=indent,eol,start
 se ve=onemore
-se cc=80
+se wim=longest:list,full
 se sel=exclusive
-se t_vb=
 
 " LMB goes into insert mode
 nnoremap <LeftMouse> <LeftMouse>a
