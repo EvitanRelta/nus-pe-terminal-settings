@@ -70,6 +70,9 @@ set cul
 " set lazyredraw
 set ttyfast
 
+" Set :vert to split right
+set splitright
+
 " For students who are used to using the psvm/sout/sop abbreviation, you can
 " uncomment the following.
 "
