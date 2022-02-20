@@ -30,6 +30,8 @@ au BufLeave * call feedkeys("\<Esc>", 't')
 colorscheme codedark
 argadd ./*.java
 
+" Set :vert to split right
+set splitright
 
 " Indentation
 function! TabFn()
