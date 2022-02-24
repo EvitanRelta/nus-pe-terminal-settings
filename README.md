@@ -2,7 +2,7 @@
 
 For when you need to use Vim, but you prefer the normal text-editor-like experience.
 
-The simplified settings for PE can be found in the `simplified` branch.
+The simplified settings for PE can be found in the [`simplified`](https://github.com/EvitanRelta/nus-pe-terminal-settings/tree/simplified) branch.
 
 <br><br>
 
