@@ -8,6 +8,7 @@
 /.vim/.netrwhist
 
 !/.bash_profile
+!/.bashrc
 !/.gitconfig
 !/.inputrc
 !/.vimrc
