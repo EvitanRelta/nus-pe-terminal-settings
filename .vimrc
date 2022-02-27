@@ -22,7 +22,7 @@ se wim=longest:list,full
 se sel=exclusive
 
 let g:lightline={ 'colorscheme': 'deus' }
-let g:netrw_list_hide='.*\.class$,^\./$'
+let g:netrw_list_hide='.*\.class$,^\./$,^\.nfs[^\.]*'
 let g:netrw_altv=1
 let g:delimitMate_expand_cr = 1
 
