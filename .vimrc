@@ -189,6 +189,12 @@ inoremap <silent> <C-K> <Esc>:!javac -Xlint:all %<CR>
 " [Ctrl + B] (normal mode) vertical split diff with current file
 nnoremap <silent> <C-B> :vert diffsplit 
 
+" Arrow keys in normal mode switches to insert mode
+nnoremap <silent> <Left> i<Left>
+nnoremap <silent> <Right> i<Right>
+nnoremap <silent> <Up> i<Up>
+nnoremap <silent> <Down> i<Down>
+
 
 " [Ctrl + /] (visual) comment / uncomment selection
 function! JavaVisualCommentAndUncomment()
