@@ -178,8 +178,8 @@ inoremap <silent> <C-Y> <Esc><C-R>a
 
 " [Ctrl + A] visually select all
 nnoremap <silent> <C-A> ggVG
-vnoremap <silent> <C-A> <C-C>ggVG
-inoremap <silent> <C-A> <Esc>ggVG
+vnoremap <silent> <C-A> <C-Home>oVG
+inoremap <silent> <C-A> <C-Home><C-O>VG
 
 " [Ctrl + K] compile current file
 nnoremap <silent> <C-K> :!javac -Xlint:rawtypes %<CR>
