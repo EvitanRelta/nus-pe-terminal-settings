@@ -186,6 +186,11 @@ nnoremap <silent> <C-K> :!javac -Xlint:all %<CR>
 vnoremap <silent> <C-K> <C-C>:!javac -Xlint:all %<CR>
 inoremap <silent> <C-K> <Esc>:!javac -Xlint:all %<CR>
 
+" [Ctrl + J] vertical terminal
+nnoremap <silent> <C-J> :vert ter<CR>
+vnoremap <silent> <C-J> <C-C>:vert ter<CR>
+inoremap <silent> <C-J> <Esc>:vert ter<CR>
+
 " [Ctrl + B] (normal mode) vertical split diff with current file
 nnoremap <silent> <C-B> :vert diffsplit 
 
