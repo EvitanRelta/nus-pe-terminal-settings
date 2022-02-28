@@ -85,3 +85,4 @@ vnoremap <c-z> <c-c>u
 inoremap <c-z> <esc>ui
 
 
+source ~/nonessentials/autocomplete_pop.vim
