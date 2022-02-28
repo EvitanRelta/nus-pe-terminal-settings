@@ -80,9 +80,9 @@ set splitright
 " For students who are used to using the psvm/sout/sop abbreviation, you can
 " uncomment the following.
 "
-abbr mainfn public static void main(String[] args){<CR><Bs>
-abbr println System.out.println();<Left><Left>
-abbr printf System.out.printf();<Left><Left>
+iab mainfn public static void main(String[] args) {<CR><Bs>
+iab println System.out.println;<Left>
+iab printf System.out.printf;<Left>
 
 "" PLUGINS
 " vim-rainbow
