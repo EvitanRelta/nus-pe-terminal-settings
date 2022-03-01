@@ -13,7 +13,6 @@ se ls=2
 se bdir=~/.backup
 se cc=80
 se t_vb=
-se t_kb=
 se bs=indent,eol,start
 se mouse=a
 se ttym=sgr
