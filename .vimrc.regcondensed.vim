@@ -1,5 +1,5 @@
 " Vim replace commands to run (in order):
-" 1. :%s/\v^(.?)#([A-Z]) (.+)/nn <silent> <C-\2> \3\rvn <silent> <C-\2> <C-C>\3\rin <silent> <C-\2> <Esc>\3\1\r/g
+" 1. :%s/\v^(.?)#([a-z]) (.+)/nn <silent> <c-\2> \3\rvn <silent> <c-\2> <c-c>\3\rin <silent> <c-\2> <esc>\3\1\r/g
 " 2. :%s/\v^([nvi]+)/\1oremap/g
 
 syn on
@@ -16,53 +16,53 @@ let g:netrw_list_hide='.*\.class$'
 let g:netrw_altv=1
 let g:delimitMate_expand_cr = 1
 
-au BufLeave * call feedkeys("\<Esc>", 't')
+au BufLeave * call feedkeys("\<esc>", 't')
 colo codedark
 argadd ./*.java
 
 " Indentation
-fu TabFn()
+fu Tabfn()
   if pumvisible()
-    return "\<C-Y>"
+    return "\<c-y>"
   elseif getline('.')[col('.') - 2] !~ '\k'
-    return "\<Tab>"
+    return "\<tab>"
   else
-    return "\<C-P>"
+    return "\<c-p>"
   endif
 endfunction
-nn <Tab> >>
-vn <Tab> >gv
-in <expr> <Tab> TabFn()
-nn <S-Tab> <<
-vn <S-Tab> <gv
-in <S-Tab> <C-D>
+nn <tab> >>
+vn <tab> >gv
+in <expr> <tab> Tabfn()
+nn <s-tab> <<
+vn <s-tab> <gv
+in <s-tab> <c-d>
 
 
 " Misc
-nn <LeftMouse> <LeftMouse>a
-vn <MiddleMouse> "_dPi
-n! <C-Bs> <C-W>
+nn <leftmouse> <leftmouse>a
+vn <middlemouse> "_dPi
+n! <c-bs> <c-w>
 
-n! <C-H> <C-W>
-in <C-D> X<Esc>ce
+n! <c-h> <c-w>
+in <c-d> X<esc>ce
 vn <silent> c y
 
 vn <silent> v "_dP
-vn <Bs> "_d
-vn <Del> "_d
+vn <bs> "_d
+vn <del> "_d
 
 
 " NVI (Normal/Visual/Insert) Keybinds
-#W :q!<CR>
-#T :Tex<CR>
-#G :Vex!<CR>
+#w :q!<cr>
+#t :Tex<cr>
+#g :Vex!<cr>
 
-#Q :Rex<CR>
-#K :!javac -Xlint:rawtypes %<CR>
-#A ggVG
+#q :Rex<cr>
+#k :!javac -Xlint:rawtypes %<cr>
+#a ggVG
 
-a#N <C-W>r
-a#S :up!<CR>
-a#Y <C-R>
+a#n <c-w>r
+a#s :up!<cr>
+a#y <c-r>
 
-i#Z u
+i#z u
