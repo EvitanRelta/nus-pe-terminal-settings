@@ -1,6 +1,7 @@
 " Vim replace commands to run (in order):
-" 1. :%s/\v^(.?)#(.) (.+)/nn <c-\2> \3\rvn <c-\2> <c-c>\3\rin <c-\2> <esc>\3\1\r/g
-" 2. :%s/\v^([nvi]+)/\1oremap/g
+" 1. :%s/\v3([^" ]+)/<\1>/g
+" 2. :%s/\v^(.?)#(.) (.+)/nn <c-\2> \3\rvn <c-\2> <c-c>\3\rin <c-\2> <esc>\3\1\r/g
+" 3. :%s/\v^([nvi]+)/\1oremap/g
 
 syn on
 filetype plugin indent on
@@ -15,44 +16,44 @@ se wim=longest:list,full sel=exclusive
 let g:netrw_list_hide='.*\.class$'
 let g:delimitMate_expand_cr = 1
 
-au BufLeave * call feedkeys("\<esc>", 't')
+au BufLeave * call feedkeys("\3esc", 't')
 colo codedark
 argadd ./*.java
 
 " Indentation
 fu Tabfn()
   if pumvisible()
-    return "\<c-y>"
+    return "\3c-y"
   elseif getline('.')[col('.') - 2] !~ '\k'
-    return "\<tab>"
+    return "\3tab"
   else
-    return "\<c-p>"
+    return "\3c-p"
   endif
 endfunction
-in <expr> <tab> Tabfn()
-in <s-tab> <c-d>
+in 3expr 3tab Tabfn()
+in 3s-tab 3c-d
 
 
 " Misc
-nn <leftmouse> <leftmouse>a
-vn <middlemouse> "_dPi
+nn 3leftmouse <leftmouse>a
+vn 3middlemouse "_dPi
 
-n! <c-h> <c-w>
+n! 3c-h 3c-w
 vn c y
 
-vn <bs> "_d
+vn 3bs "_d
 
 
 " NVI (Normal/Visual/Insert) Keybinds
-#w :q!<cr>
-#t :Tex<cr>
-#g :Vex!<cr>
+#w :q!3cr
+#t :Tex3cr
+#g :Vex!3cr
 
-#q :Rex<cr>
-#k :!javac -Xlint:all %<cr>
+#q :Rex3cr
+#k :!javac -Xlint:all %3cr
 
 a#n <c-w>r
-a#s :up!<cr>
-a#y <c-r>
+a#s :up!3cr
+a#y 3c-r
 
 i#z u
