@@ -10,24 +10,29 @@ Settings simplified for PE by:
 
 ## Installation
 
+Given a fresh PE, run the following commands:
+
+```bash
+stty -ixon
+bind tab:menu-complete
+bind c-h:backward-kill-word
+bind -x '"\C-t":vim .'
+
+cp ~cs2030s/.vimrc .
+mkdir -p ~/.vim/pack/plugins/start
+ln -s ~cs2030s/.vim/vim-colorschemes/colors ~/.vim/colors
+ln -s ~cs2030s/.vim/vim-plugins/delimitMate ~/.vim/pack/plugins/start
+ln -s ~cs2030s/.vim/vim-plugins/lightline ~/.vim/pack/plugins/start
+echo set mouse+=a >> .vimrc
+```
+
+<br>
+
+Then:
+
 1. Copy `.vimrc.regcondensed.vim` to `.vimrc`
 2. Run replace commands at top of file
 3. _**(optional)**_ Copy `.text_editor_like_selection.regcondensed.vim` to `.vimrc` & follow the instructions at the top of file
-
-<br><br>
-
-## Plugins to install
-
-```bash
-# Colors
-ln -s ~cs2030s/.vim/vim-colorschemes/colors ~/.vim/colors
-
-# DelmiteMate
-ln -s ~cs2030s/.vim/vim-plugins/delimitMate ~/.vim/pack/plugins/start
-
-# Lightline
-ln -s ~cs2030s/.vim/vim-plugins/lightline ~/.vim/pack/plugins/start
-```
 
 <br><br>
 
