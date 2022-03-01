@@ -13,7 +13,6 @@ se ttym=sgr ve=onemore
 se wim=longest:list,full sel=exclusive
 
 let g:netrw_list_hide='.*\.class$'
-let g:netrw_altv=1
 let g:delimitMate_expand_cr = 1
 
 au BufLeave * call feedkeys("\<esc>", 't')
@@ -30,26 +29,18 @@ fu Tabfn()
     return "\<c-p>"
   endif
 endfunction
-nn <tab> >>
-vn <tab> >gv
 in <expr> <tab> Tabfn()
-nn <s-tab> <<
-vn <s-tab> <gv
 in <s-tab> <c-d>
 
 
 " Misc
 nn <leftmouse> <leftmouse>a
 vn <middlemouse> "_dPi
-n! <c-bs> <c-w>
 
 n! <c-h> <c-w>
-in <c-d> X<esc>ce
 vn c y
 
-vn v "_dP
 vn <bs> "_d
-vn <del> "_d
 
 
 " NVI (Normal/Visual/Insert) Keybinds
@@ -59,7 +50,6 @@ vn <del> "_d
 
 #q :Rex<cr>
 #k :!javac -Xlint:all %<cr>
-#a ggVG
 
 a#n <c-w>r
 a#s :up!<cr>
