@@ -58,7 +58,7 @@ vn <del> "_d
 #g :Vex!<cr>
 
 #q :Rex<cr>
-#k :!javac -Xlint:rawtypes %<cr>
+#k :!javac -Xlint:all %<cr>
 #a ggVG
 
 a#n <c-w>r
