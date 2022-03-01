@@ -12,8 +12,7 @@ se bs=indent,eol,start mouse=a
 se ttym=sgr ve=onemore
 se wim=longest:list,full sel=exclusive
 
-let g:lightline={ 'colorscheme': 'deus' }
-let g:netrw_list_hide='.*\.class$,^\./$'
+let g:netrw_list_hide='.*\.class$'
 let g:netrw_altv=1
 let g:delimitMate_expand_cr = 1
 
