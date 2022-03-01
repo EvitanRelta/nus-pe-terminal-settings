@@ -14,7 +14,7 @@ se ttym=sgr ve=onemore
 se wim=longest:list,full sel=exclusive
 
 let g:netrw_list_hide='.*\.class$'
-let g:delimitMate_expand_cr = 1
+let g:delimitMate_expand_cr=1
 
 au BufLeave * call feedkeys("\3esc", 't')
 colo codedark
