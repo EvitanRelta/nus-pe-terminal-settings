@@ -1,0 +1,18 @@
+# Ignore everything
+*
+
+# Whitelist files
+!/.gitignore
+!/.vim/
+!/.vim/**
+/.vim/.netrwhist
+
+!/.bash_profile
+!/.bashrc
+!/.gitconfig
+!/.inputrc
+!/.vimrc
+!/README.md
+!/nonessentials/
+!/nonessentials/*.vim
+!/*.regcondensed.vim
