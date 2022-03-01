@@ -4,13 +4,12 @@
 
 syn on
 filetype plugin indent on
-se ai si bk et ic vb tf lbr hls spr
+se ai si nobk et ic vb tf lbr hls spr
 se scs cul wrap nocp wmnu noeb
 
 se sw=2
 se ts=2
 se ls=2
-se bdir=~/.backup
 se cc=80
 se t_vb=
 se bs=indent,eol,start
