@@ -1,5 +1,5 @@
 " Vim replace commands to run (in order):
-" 1. :%s/\v^(.?)#([a-z]) (.+)/nn <silent> <c-\2> \3\rvn <silent> <c-\2> <c-c>\3\rin <silent> <c-\2> <esc>\3\1\r/g
+" 1. :%s/\v^(.?)#([a-z]) (.+)/nn <c-\2> \3\rvn <c-\2> <c-c>\3\rin <c-\2> <esc>\3\1\r/g
 " 2. :%s/\v^([nvi]+)/\1oremap/g
 
 syn on
@@ -45,9 +45,9 @@ n! <c-bs> <c-w>
 
 n! <c-h> <c-w>
 in <c-d> X<esc>ce
-vn <silent> c y
+vn c y
 
-vn <silent> v "_dP
+vn v "_dP
 vn <bs> "_d
 vn <del> "_d
 
