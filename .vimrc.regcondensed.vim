@@ -7,17 +7,10 @@ filetype plugin indent on
 se ai si nobk et ic vb tf lbr hls spr
 se scs cul wrap nocp wmnu noeb
 
-se sw=2
-se ts=2
-se ls=2
-se cc=80
-se t_vb=
-se bs=indent,eol,start
-se mouse=a
-se ttym=sgr
-se ve=onemore
-se wim=longest:list,full
-se sel=exclusive
+se sw=2 ts=2 ls=2 cc=80 t_vb=
+se bs=indent,eol,start mouse=a
+se ttym=sgr ve=onemore
+se wim=longest:list,full sel=exclusive
 
 let g:lightline={ 'colorscheme': 'deus' }
 let g:netrw_list_hide='.*\.class$,^\./$'
