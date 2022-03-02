@@ -11,24 +11,30 @@ se scs cul wrap nocp wmnu noeb
 se sw=2 ts=2 ls=2 cc=80 t_vb=
 se mouse=a ttym=sgr ve=onemore
 se wim=longest:list,full sel=exclusive
+se cot=menu,menuone,noinsert
 
 let g:netrw_list_hide='.*\.class$'
 let g:delimitMate_expand_cr=1
 
 aut bufleave * call feedkeys("\3esc", 't')
+aut insertcharpre * call Pop()
 colo codedark
 arga ./*.java
 
 " Indentation
 fu Tabfn()
-  if pumvisible()
-    retu "\3c-y"
-  elsei getline('.')[col('.') - 2] !~ '\k'
-    retu "\3tab"
-  else
-    retu "\3c-p"
+  return getline('.')[col('.') - 2] !~ '\k'
+    \ ? "\3tab"
+    \ : "\3c-y"
+endf
+
+" Auto-complete pop
+fu Pop()
+  if v:char =~ '\K' && !pumvisible()
+    call feedkeys("\3c-p", 'n')
   en
 endf
+
 ino 3expr 3tab Tabfn()
 ino 3s-tab 3c-d
 
