@@ -13,17 +13,32 @@ Settings simplified for PE by:
 Given a fresh PE, run the following commands:
 
 ```bash
+cp ~cs2030s/.vimrc .
+echo set mouse=a >> .vimrc
+vim .bashrc
+```
+
+<br>
+
+Add to `.bashrc`
+
+```bash
 stty -ixon
 bind tab:menu-complete
 bind c-h:backward-kill-word
 bind -x '"\C-t":vim .'
+```
 
-cp ~cs2030s/.vimrc .
+<br>
+
+Then run the bash commands:
+
+```bash
+source .bashrc
 mkdir -p ~/.vim/pack/plugins/start
 ln -s ~cs2030s/.vim/vim-colorschemes/colors ~/.vim/colors
 ln -s ~cs2030s/.vim/vim-plugins/delimitMate ~/.vim/pack/plugins/start
 ln -s ~cs2030s/.vim/vim-plugins/lightline ~/.vim/pack/plugins/start
-echo set mouse+=a >> .vimrc
 ```
 
 <br>
