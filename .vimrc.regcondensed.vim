@@ -1,7 +1,6 @@
 " Vim replace commands to run (in order):
 " 1. :%s/\v3([^" ]+)/<\1>/g
-" 2. :%s/\v^(.?)#(.) (.+)/nn <c-\2> \3\rvn <c-\2> <c-c>\3\rin <c-\2> <esc>\3\1\r/g
-" 3. :%s/\v^([nvi]+)/\1oremap/g
+" 2. :%s/\v^(.?)#(.) (.+)/nn <c-\2> \3\rvn <c-\2> <c-c>\3\rino <c-\2> <esc>\3\1\r/g
 
 syn on
 filetype plugin indent on
@@ -29,15 +28,15 @@ fu Tabfn()
     retu "\3c-p"
   en
 endf
-in 3expr 3tab Tabfn()
-in 3s-tab 3c-d
+ino 3expr 3tab Tabfn()
+ino 3s-tab 3c-d
 
 
 " Misc
 nn 3leftmouse <leftmouse>a
 vn 3middlemouse "_dPi
 
-n! 3c-h 3c-w
+no! 3c-h 3c-w
 vn c y
 
 vn 3bs "_d
