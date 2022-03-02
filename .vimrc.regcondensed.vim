@@ -46,10 +46,10 @@ vn 3bs "_d
 
 " NVI (Normal/Visual/Insert) Keybinds
 #w :q!3cr
-#t :Tex3cr
-#g :Vex!3cr
+#t :Te3cr
+#g :Ve!3cr
 
-#q :Rex3cr
+#q :Re3cr
 #k :!javac -Xlint:all %3cr
 
 a#n <c-w>r
