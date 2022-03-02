@@ -23,13 +23,13 @@ argadd ./*.java
 " Indentation
 fu Tabfn()
   if pumvisible()
-    return "\3c-y"
-  elseif getline('.')[col('.') - 2] !~ '\k'
-    return "\3tab"
+    retu "\3c-y"
+  elsei getline('.')[col('.') - 2] !~ '\k'
+    retu "\3tab"
   else
-    return "\3c-p"
-  endif
-endfunction
+    retu "\3c-p"
+  en
+endf
 in 3expr 3tab Tabfn()
 in 3s-tab 3c-d
 
