@@ -35,10 +35,10 @@ Then run the bash commands:
 
 ```bash
 source .bashrc
-mkdir -p ~/.vim/pack/plugins/start
-ln -s ~cs2030s/.vim/vim-colorschemes/colors ~/.vim/colors
-ln -s ~cs2030s/.vim/vim-plugins/delimitMate ~/.vim/pack/plugins/start
-ln -s ~cs2030s/.vim/vim-plugins/lightline ~/.vim/pack/plugins/start
+mkdir -p .vim/pack/plugins/start
+ln -s ~cs2030s/.vim/vim-colorschemes/colors/ .vim
+ln -s ~cs2030s/.vim/vim-plugins/delimitMate/ .vim/pack/plugins/start
+ln -s ~cs2030s/.vim/vim-plugins/lightline/ .vim/pack/plugins/start
 ```
 
 <br>
