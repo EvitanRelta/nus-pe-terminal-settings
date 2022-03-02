@@ -1,6 +1,6 @@
 " Vim replace commands to run (in order):
 " 1. :%s/\v3([^" ]+)/<\1>/g
-" 2. :%s/\v^(.?)#(.) (.+)/nn <c-\2> \3\rvn <c-\2> <c-c>\3\rino <c-\2> <esc>\3\1\r/g
+" 2. :%s/\v^(.?)a(.) (.+)/nn <c-\2> \3\rvn <c-\2> <c-c>\3\rino <c-\2> <esc>\3\1\r/g
 
 syn on
 filetype plugin indent on
@@ -14,7 +14,7 @@ se wim=longest:list,full sel=exclusive
 let g:netrw_list_hide='.*\.class$'
 let g:delimitMate_expand_cr=1
 
-au bufleave * call feedkeys("\3esc", 't')
+aut bufleave * call feedkeys("\3esc", 't')
 colo codedark
 arga ./*.java
 
@@ -43,15 +43,15 @@ vn 3bs "_d
 
 
 " NVI (Normal/Visual/Insert) Keybinds
-#w :q!3cr
-#t :Te3cr
-#g :Ve!3cr
+aw :q!3cr
+at :Te3cr
+ag :Ve!3cr
 
-#q :Re3cr
-#k :!javac -Xlint:all %3cr
+aq :Re3cr
+ak :!javac -Xlint:all %3cr
 
-a#n <c-w>r
-a#s :up!3cr
-a#y 3c-r
+aan <c-w>r
+aas :up!3cr
+aay 3c-r
 
-i#z u
+iaz u
