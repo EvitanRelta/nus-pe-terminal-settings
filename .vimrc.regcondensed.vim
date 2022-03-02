@@ -18,7 +18,7 @@ let g:delimitMate_expand_cr=1
 
 au bufleave * call feedkeys("\3esc", 't')
 colo codedark
-argadd ./*.java
+arga ./*.java
 
 " Indentation
 fu Tabfn()
