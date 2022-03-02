@@ -1,6 +1,7 @@
 " Vim replace commands to run (in order):
-" 1. :%s/\v3([^" ]+)/<\1>/g
-" 2. :%s/\v^(.?)a(.) (.+)/nn <c-\2> \3\rvn <c-\2> <c-c>\3\rino <c-\2> <esc>\3\1\r/g
+" :%s/\vs$/3cr/g
+" :%s/\v3([^" ]+)/<\1>/g
+" :%s/\v^(.?)a(.) (.+)/nn <c-\2> \3\rvn <c-\2> <c-c>\3\rino <c-\2> <esc>\3\1\r/g
 
 syn on
 filetype plugin indent on
@@ -43,15 +44,15 @@ vn 3bs "_d
 
 
 " NVI (Normal/Visual/Insert) Keybinds
-aw :q!3cr
-at :Te3cr
-ag :Ve!3cr
+aw :q!s
+at :Tes
+ag :Ve!s
 
-aq :Re3cr
-ak :!javac -Xlint:all %3cr
+aq :Res
+ak :!javac -Xlint:all %s
 
 aan <c-w>r
-aas :up!3cr
+aas :up!s
 aay 3c-r
 
 iaz u
