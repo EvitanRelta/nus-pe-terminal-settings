@@ -17,25 +17,12 @@ let g:netrw_list_hide='.*\.class$'
 let g:delimitMate_expand_cr=1
 
 aut bufleave * call feedkeys("\3esc", 't')
-aut insertcharpre * call Pop()
+aut insertcharpre * if v:char =~ '\K' && !pumvisible() | cal feedkeys("\3c-p", 'n') | en
 colo codedark
 arga *.java
 
 " Indentation
-fu Tabfn()
-  return pumvisible()
-    \ ? "\3c-y"
-    \ : "\3tab"
-endf
-
-" Auto-complete pop
-fu Pop()
-  if v:char =~ '\K' && !pumvisible()
-    call feedkeys("\3c-p", 'n')
-  en
-endf
-
-ino 3expr 3tab Tabfn()
+ino 3expr 3tab pumvisible() ? '3c-y' : '3tab'
 ino 3s-tab 3c-d
 
 
