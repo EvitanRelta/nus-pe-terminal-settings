@@ -40,7 +40,7 @@ at :Tes
 ag :Ve!s
 
 aq :Res
-ak :!javac -Xlint:all %s
+ak :!javac -Xlint:unchecked,rawtypes %s
 
 aan <c-w>r
 aas :up!s
