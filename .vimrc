@@ -1,6 +1,6 @@
 " Vim replace commands to run (in order):
 " :%s/\vs$/3cr/g
-" :%s/\v3([^" ]+)/<\1>/g
+" :%s/\v3([^" ']+)/<\1>/g
 " :%s/\v^(.?)a(.) (.+)/nn <c-\2> \3\rvn <c-\2> <c-c>\3\rino <c-\2> <esc>\3\1\r/g
 
 syn on
@@ -9,33 +9,18 @@ se ai si nobk et ic vb tf lbr hls spr
 se scs cul wrap nocp wmnu noeb
 
 se sw=2 ts=2 ls=2 cc=80 t_vb=
-se mouse=a ttym=sgr ve=onemore
+se mouse=a ttym=sgr ve=onemore cpt=u,i
 se wim=longest:list,full sel=exclusive
-se cot=menu,menuone,noinsert
 
 let g:netrw_list_hide='.*\.class$'
 let g:delimitMate_expand_cr=1
 
 aut bufleave * call feedkeys("\<esc>", 't')
-aut insertcharpre * call Pop()
 colo codedark
 arga *.java
 
 " Indentation
-fu Tabfn()
-  return pumvisible()
-    \ ? "\<c-y>"
-    \ : "\<tab>"
-endf
-
-" Auto-complete pop
-fu Pop()
-  if v:char =~ '\K' && !pumvisible()
-    call feedkeys("\<c-p>", 'n')
-  en
-endf
-
-ino <expr> <tab> Tabfn()
+ino <expr> <tab> pumvisible() ? '<c-y>' : getline('.')[col('.')-2] !~ '\k' ? '<tab>' : '<c-p>'
 ino <s-tab> <c-d>
 
 
@@ -67,9 +52,9 @@ nn <c-q> :Re<cr>
 vn <c-q> <c-c>:Re<cr>
 ino <c-q> <esc>:Re<cr>
 
-nn <c-k> :!javac -Xlint:all %<cr>
-vn <c-k> <c-c>:!javac -Xlint:all %<cr>
-ino <c-k> <esc>:!javac -Xlint:all %<cr>
+nn <c-k> :!clear; javac -Xlint:unchecked,rawtypes %<cr>
+vn <c-k> <c-c>:!clear; javac -Xlint:unchecked,rawtypes %<cr>
+ino <c-k> <esc>:!clear; javac -Xlint:unchecked,rawtypes %<cr>
 
 
 nn <c-n> <c-w>r
