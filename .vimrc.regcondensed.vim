@@ -1,6 +1,6 @@
 " Vim replace commands to run (in order):
 " :%s/\vs$/3cr/g
-" :%s/\v3([^" ]+)/<\1>/g
+" :%s/\v3([^" ']+)/<\1>/g
 " :%s/\v^(.?)a(.) (.+)/nn <c-\2> \3\rvn <c-\2> <c-c>\3\rino <c-\2> <esc>\3\1\r/g
 
 syn on
