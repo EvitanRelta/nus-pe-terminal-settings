@@ -16,3 +16,4 @@
 !/nonessentials/
 !/nonessentials/*.vim
 !/*.regcondensed.vim
+!/sel.vim

@@ -89,4 +89,4 @@ nn <c-z> u
 vn <c-z> <c-c>u
 ino <c-z> <esc>ui
 
-
+so ~/sel.vim
