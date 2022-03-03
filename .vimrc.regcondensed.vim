@@ -11,18 +11,16 @@ se scs cul wrap nocp wmnu noeb
 se sw=2 ts=2 ls=2 cc=80 t_vb=
 se mouse=a ttym=sgr ve=onemore
 se wim=longest:list,full sel=exclusive
-se cot=menu,menuone,noinsert
 
 let g:netrw_list_hide='.*\.class$'
 let g:delimitMate_expand_cr=1
 
 aut bufleave * call feedkeys("\3esc", 't')
-aut insertcharpre * if v:char =~ '\K' && !pumvisible() | cal feedkeys("\3c-p", 'n') | en
 colo codedark
 arga *.java
 
 " Indentation
-ino 3expr 3tab pumvisible() ? '3c-y' : '3tab'
+ino 3expr 3tab pumvisible() ? '3c-y' : getline('.')[col('.')-2] !~ '\k' ? '3tab' : '3c-p'
 ino 3s-tab 3c-d
 
 
