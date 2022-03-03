@@ -23,9 +23,9 @@ arga *.java
 
 " Indentation
 fu Tabfn()
-  return getline('.')[col('.') - 2] !~ '\k'
-    \ ? "\3tab"
-    \ : "\3c-y"
+  return pumvisible()
+    \ ? "\3c-y"
+    \ : "\3tab"
 endf
 
 " Auto-complete pop
