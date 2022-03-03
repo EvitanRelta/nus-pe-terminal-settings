@@ -1,15 +1,15 @@
 " Vim replace commands to run:
-" 1. :%s/\v^#([A-Za-z-]+)/vnoremap <\1> <Esc><\1>\rvnoremap <S-\1> <\1>\rinoremap <S-\1> <C-O>v<\1>\r/g
-
+" :%s/\v(.+)/vn <\1> <esc><\1>\rvn <s-\1> <\1>\rino <s-\1> <c-o>v<\1>\r/g
+" 
 " Then remove visual keybinds for C-Left & C-Right
 
-#Home
-#End
-#Up
-#Down
-#Left
-#Right
+home
+end
+up
+down
+left
+right
 
 
-#C-Left
-#C-Right
+c-left
+c-right
