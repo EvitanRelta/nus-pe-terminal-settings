@@ -5,8 +5,8 @@
 
 syn on
 filetype plugin indent on
-se ai si nobk et ic vb tf lbr hls spr
-se scs cul wrap nocp wmnu noeb
+se ai si nobk et vb tf lbr hls spr
+se cul wrap nocp wmnu noeb
 
 se sw=2 ts=2 ls=2 cc=80 t_vb=
 se mouse=a ttym=sgr ve=onemore cpt=u,i
