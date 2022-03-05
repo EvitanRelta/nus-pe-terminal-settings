@@ -32,6 +32,7 @@ no! 3c-h 3c-w
 vn c y
 
 vn 3bs "_d
+vn 3c-f y/3c-r"s
 
 
 " NVI (Normal/Visual/Insert) Keybinds

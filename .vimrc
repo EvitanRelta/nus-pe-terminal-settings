@@ -32,6 +32,7 @@ no! <c-h> <c-w>
 vn c y
 
 vn <bs> "_d
+vn <c-f> y/<c-r>"<cr>
 
 
 " NVI (Normal/Visual/Insert) Keybinds
