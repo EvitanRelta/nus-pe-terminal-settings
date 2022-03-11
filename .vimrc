@@ -278,5 +278,3 @@ au BufNewFile *.java call LoadTemplate()
 "   //cursor here
 " }
 let g:delimitMate_expand_cr = 1
-
-source ~/nonessentials/autocomplete_pop.vim
