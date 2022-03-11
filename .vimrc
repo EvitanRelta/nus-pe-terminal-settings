@@ -77,6 +77,9 @@ set ttyfast
 " Set :vert to split right
 set splitright
 
+" Set autocomplete to only search keywords in current file, '.java' files in dir
+set complete=i,u
+
 " For students who are used to using the psvm/sout/sop abbreviation, you can
 " uncomment the following.
 "
