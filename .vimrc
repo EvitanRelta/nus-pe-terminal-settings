@@ -185,9 +185,9 @@ vnoremap <silent> <C-A> <C-Home>oVG
 inoremap <silent> <C-A> <C-Home><C-O>VG
 
 " [Ctrl + K] compile current file
-nnoremap <silent> <C-K> :!javac -Xlint:unchecked,rawtypes %<CR>
-vnoremap <silent> <C-K> <C-C>:!javac -Xlint:unchecked,rawtypes %<CR>
-inoremap <silent> <C-K> <Esc>:!javac -Xlint:unchecked,rawtypes %<CR>
+nnoremap <silent> <C-K> :!clear; javac -Xlint:unchecked,rawtypes %<CR>
+vnoremap <silent> <C-K> <C-C>:!clear; javac -Xlint:unchecked,rawtypes %<CR>
+inoremap <silent> <C-K> <Esc>:!clear; javac -Xlint:unchecked,rawtypes %<CR>
 
 " [Ctrl + J] vertical terminal
 nnoremap <silent> <C-J> :vert ter<CR>
