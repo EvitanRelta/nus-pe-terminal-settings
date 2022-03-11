@@ -1,7 +1,5 @@
 $include /etc/inputrc
 set completion-ignore-case On
-TAB:menu-complete
-"\C-h": backward-kill-word
 
 # Disable error bell sounds
 set bell-style none
