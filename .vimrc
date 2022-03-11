@@ -56,8 +56,8 @@ set wildmode=longest:list,full
 set hlsearch 
 " set confirm 
 " set visualbell 
-set ignorecase 
-set smartcase
+" set ignorecase 
+" set smartcase
 
 " The following should give 16 colors on old Windows machine
 "set t_AB=[%?%p1%{8}%<%t%p1%{40}%+%e%p1%{92}%+%;%dm
