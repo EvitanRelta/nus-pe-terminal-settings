@@ -139,6 +139,9 @@ vnoremap <silent> c y
 " [V] (visual) paste
 vnoremap <silent> v "_dP
 
+" [Home] (insert) goes to first non-whitespace
+inoremap <silent> <Home> <C-O>^
+
 " [Ctrl + S] save
 nnoremap <silent> <C-S> :up!<CR>
 vnoremap <silent> <C-S> <C-C>:up!<CR>
