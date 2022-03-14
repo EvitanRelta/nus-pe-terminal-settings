@@ -34,6 +34,8 @@ vn c y
 vn <bs> "_d
 vn <c-f> y/<c-r>"<cr>
 
+ino <home> <c-o>^
+
 
 " NVI (Normal/Visual/Insert) Keybinds
 nn <c-w> :q!<cr>

@@ -34,6 +34,8 @@ vn c y
 vn 3bs "_d
 vn 3c-f y/3c-r"s
 
+ino 3home 3c-o^
+
 
 " NVI (Normal/Visual/Insert) Keybinds
 aw :q!s
