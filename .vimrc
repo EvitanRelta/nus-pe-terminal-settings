@@ -121,6 +121,9 @@ let g:netrw_list_hide='.*\.class$,^\./$,^\.nfs[^\.]*'
 " Open new split view ([V] in Netrw) on right instead of left
 let g:netrw_altv=1
 
+" Always sets current dir as working dir in Netrw
+let g:netrw_keepdir=0
+
 " [Ctrl + Backspace] deletes previous word
 " Requires 'stty -ixon' in ./bash_profile 
 set backspace=indent,eol,start
