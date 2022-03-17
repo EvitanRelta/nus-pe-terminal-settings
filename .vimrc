@@ -161,9 +161,9 @@ vnoremap <silent> <C-T> <C-C>:Tex<CR>
 inoremap <silent> <C-T> <Esc>:Tex<CR>
 
 " [Ctrl + G] new explorer split
-nnoremap <silent> <C-G> :Vex!<CR>
-vnoremap <silent> <C-G> <C-C>:Vex!<CR>
-inoremap <silent> <C-G> <Esc>:Vex!<CR>
+nnoremap <silent> <C-G> :Vex!<CR><C-W>=
+vnoremap <silent> <C-G> <C-C>:Vex!<CR><C-W>=
+inoremap <silent> <C-G> <Esc>:Vex!<CR><C-W>=
 
 " [Ctrl + Q] return to explorer
 nnoremap <silent> <C-Q> :Rex<CR>
