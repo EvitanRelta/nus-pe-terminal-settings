@@ -46,9 +46,9 @@ nn <c-t> :Te<cr>
 vn <c-t> <c-c>:Te<cr>
 ino <c-t> <esc>:Te<cr>
 
-nn <c-g> :Ve!<cr>
-vn <c-g> <c-c>:Ve!<cr>
-ino <c-g> <esc>:Ve!<cr>
+nn <c-g> :Ve!<cr><c-w>=
+vn <c-g> <c-c>:Ve!<cr><c-w>=
+ino <c-g> <esc>:Ve!<cr><c-w>=
 
 
 nn <c-q> :Re<cr>

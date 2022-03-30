@@ -40,7 +40,7 @@ ino 3home 3c-o^
 " NVI (Normal/Visual/Insert) Keybinds
 aw :q!s
 at :Tes
-ag :Ve!s
+ag :Ve!3cr3c-w=
 
 aq :Res
 ak :!clear; javac -Xlint:unchecked,rawtypes %s
