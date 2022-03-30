@@ -9,7 +9,7 @@ se ai si nobk et vb tf lbr hls spr
 se cul wrap nocp wmnu noeb
 
 se sw=2 ts=2 ls=2 cc=80 t_vb=
-se mouse=a ttym=sgr ve=onemore cpt=i,u
+se mouse=a ttym=sgr ve=onemore cpt=.,u
 se wim=longest:list,full sel=exclusive
 
 let g:netrw_list_hide='.*\.class$'
