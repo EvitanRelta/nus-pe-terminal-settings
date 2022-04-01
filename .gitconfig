@@ -15,3 +15,4 @@
   undoc = "!cd "${GIT_PREFIX:-.}"; f() { git reset --soft HEAD^; }; f"
   stat = "!cd "${GIT_PREFIX:-.}"; f() { git status; }; f"
   pop = "!cd "${GIT_PREFIX:-.}"; f() { git stash pop; }; f"
+  rebun = "!cd "${GIT_PREFIX:-.}"; f() { GIT_SEQUENCE_EDITOR=\"perl -0777 -i -pe 's/^pick/$1/'\" git rebase -i $2; }; f"
